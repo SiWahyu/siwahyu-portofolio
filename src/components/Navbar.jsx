@@ -1,24 +1,28 @@
 import { useRef, useState } from "react";
 
-export default function Navbar({ aboutRef, skillRef, heroRef }) {
+export default function Navbar({ aboutRef, skillRef, heroRef, projectRef }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleAboutRef = () => {
-    aboutRef.current.scrollIntoView({ behavior: "smooth" });
-  };
-  const handleSkillRef = () => {
-    skillRef.current.scrollIntoView({ behavior: "smooth" });
-  };
-  const handleHeroRef = () => {
-    heroRef.current.scrollIntoView({ behavior: "smooth" });
+  const handleClick = (e) => {
+    const key = e.target.name;
+
+    if (key === "Home") {
+      heroRef.current.scrollIntoView({ behavior: "smooth" });
+    } else if (key === "About") {
+      aboutRef.current.scrollIntoView({ behavior: "smooth" });
+    } else if (key === "Skill") {
+      skillRef.current.scrollIntoView({ behavior: "smooth" });
+    } else if (key === "Project") {
+      projectRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-transparent bg-opacity-80 backdrop-blur-sm transition-all duration-300">
+    <nav className="fixed top-0 left-0 w-full bg-transparent bg-opacity-80 backdrop-blur-sm transition-all duration-100">
       <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
           className="flex items-center space-x-3 rtl:space-x-reverse"
-          onClick={handleHeroRef}
+          onClick={handleClick}
         >
           <span className="self-center text-2xl font-semibold whitespace-nowrap text-white font-mono">
             SiWahyu
@@ -54,26 +58,38 @@ export default function Navbar({ aboutRef, skillRef, heroRef }) {
           <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 font-mono">
             <li>
               <button
-                className="block py-2 px-3 text-white rounded-sm md:hover:bg-transparent hover:text-slate-300 md:p-0 "
-                onClick={handleHeroRef}
+                className={`block py-2 px-3 text-white rounded-sm md:hover:bg-transparent hover:text-slate-300 md:p-0`}
+                onClick={handleClick}
+                name="Home"
               >
                 Home
               </button>
             </li>
             <li>
               <button
-                onClick={handleAboutRef}
-                className="block py-2 px-3 text-white rounded-sm md:hover:bg-transparent hover:text-slate-300 md:p-0"
+                onClick={handleClick}
+                className={`block py-2 px-3 text-white rounded-sm md:hover:bg-transparent hover:text-slate-300 md:p-0`}
+                name="About"
               >
                 About
               </button>
             </li>
             <li>
               <button
-                onClick={handleSkillRef}
-                className="block py-2 px-3 text-white rounded-sm md:hover:bg-transparent hover:text-slate-300 md:p-0"
+                onClick={handleClick}
+                className={`block py-2 px-3 text-white rounded-sm md:hover:bg-transparent hover:text-slate-300 md:p-0`}
+                name="Skill"
               >
                 Skill
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={handleClick}
+                className={`block py-2 px-3 text-white rounded-sm md:hover:bg-transparent hover:text-slate-300 md:p-0`}
+                name="Project"
+              >
+                Project
               </button>
             </li>
           </ul>

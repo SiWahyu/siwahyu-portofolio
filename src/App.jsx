@@ -5,6 +5,8 @@ import Skill from "./components/Skill";
 import { useEffect, useMemo, useRef, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
+import "@fontsource/chakra-petch/400.css";
+import Project from "./components/Project";
 
 function App() {
   const [init, setInit] = useState(false);
@@ -12,6 +14,7 @@ function App() {
   const aboutRef = useRef(null);
   const skillRef = useRef(null);
   const heroRef = useRef(null);
+  const projectRef = useRef(null);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -256,10 +259,16 @@ function App() {
 
       {/* Konten di atas Particles */}
       <div className="relative z-10">
-        <Navbar aboutRef={aboutRef} skillRef={skillRef} heroRef={heroRef} />
+        <Navbar
+          aboutRef={aboutRef}
+          skillRef={skillRef}
+          heroRef={heroRef}
+          projectRef={projectRef}
+        />
         <Hero aboutRef={aboutRef} ref={heroRef} />
         <About ref={aboutRef} />
         <Skill ref={skillRef} />
+        <Project ref={projectRef} />
       </div>
     </div>
   );
