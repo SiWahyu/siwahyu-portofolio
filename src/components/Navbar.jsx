@@ -1,6 +1,12 @@
 import { useRef, useState } from "react";
 
-export default function Navbar({ aboutRef, skillRef, heroRef, projectRef }) {
+export default function Navbar({
+  aboutRef,
+  skillRef,
+  heroRef,
+  projectRef,
+  contactRef,
+}) {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleClick = (e) => {
@@ -14,6 +20,8 @@ export default function Navbar({ aboutRef, skillRef, heroRef, projectRef }) {
       skillRef.current.scrollIntoView({ behavior: "smooth" });
     } else if (key === "Project") {
       projectRef.current.scrollIntoView({ behavior: "smooth" });
+    } else if (key === "Contact") {
+      contactRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -90,6 +98,15 @@ export default function Navbar({ aboutRef, skillRef, heroRef, projectRef }) {
                 name="Project"
               >
                 Project
+              </button>
+            </li>
+            <li>
+              <button
+                onClick={handleClick}
+                className={`block py-2 px-3 text-white rounded-sm md:hover:bg-transparent hover:text-slate-300 md:p-0`}
+                name="Contact"
+              >
+                Contact
               </button>
             </li>
           </ul>

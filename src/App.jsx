@@ -7,14 +7,15 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 import "@fontsource/chakra-petch/400.css";
 import Project from "./components/Project";
+import Contact from "./components/Contact";
 
 function App() {
   const [init, setInit] = useState(false);
-  const startRef = useRef(null);
   const aboutRef = useRef(null);
   const skillRef = useRef(null);
   const heroRef = useRef(null);
   const projectRef = useRef(null);
+  const contactRef = useRef(null);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
@@ -264,11 +265,13 @@ function App() {
           skillRef={skillRef}
           heroRef={heroRef}
           projectRef={projectRef}
+          contactRef={contactRef}
         />
         <Hero aboutRef={aboutRef} ref={heroRef} />
         <About ref={aboutRef} />
         <Skill ref={skillRef} />
         <Project ref={projectRef} />
+        <Contact ref={contactRef} />
       </div>
     </div>
   );
