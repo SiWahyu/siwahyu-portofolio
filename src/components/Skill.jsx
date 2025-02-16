@@ -454,12 +454,12 @@ export default function Skill({ ref }) {
   ];
   return (
     <div
-      className="container min-h-screen flex mx-auto  flex-row items-center justify-center"
+      className="container min-h-screen flex mx-auto  flex-row items-center justify-center "
       ref={ref}
     >
       <div className="mx-auto max-w-lg text-center">
         <h2 className="text-2xl font-bold text-white md:text-3xl font-space">
-          Tech Stack I Use
+          Tech Stack im Using
         </h2>
         <div className="flex flex-wrap justify-center gap-4 mt-12 w-full">
           {skills.map((item, index) => (

@@ -120,7 +120,7 @@ export default function Contact({ ref }) {
     >
       <div className="container px-6 py-12 mx-auto">
         <div className="text-center">
-          <h1 className="mt-2 text-2xl font-semibold  md:text-3xl text-white font-space">
+          <h1 className="mt-38 text-2xl font-semibold  md:text-3xl text-white font-space">
             Contact Us
           </h1>
         </div>

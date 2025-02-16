@@ -23,9 +23,9 @@ export default function About({ ref }) {
             About Me
           </h1>
           <p className="mt-5 text-white text-justify text-xl font-mono">
-            Halo, saya Wahyu seorang lulusan SMK jurusan Rekayasa Perengkat
+            Halo, saya Wahyu seorang lulusan SMK jurusan Rekayasa Perangkat
             Lunak. Saya memiliki minat dalam bidang IT khusus nya di bidang
-            Backend Developer / Web Developer.
+            Backend Developer & Web Developer.
           </p>
         </div>
       </div>
