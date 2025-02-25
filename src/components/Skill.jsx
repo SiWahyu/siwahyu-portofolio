@@ -458,17 +458,28 @@ export default function Skill({ ref }) {
       ref={ref}
     >
       <div className="mx-auto max-w-lg text-center">
-        <h2 className="text-2xl font-bold text-white md:text-3xl font-space">
-          Tech Stack im Using
+        <h2
+          className="text-2xl font-bold text-white md:text-3xl font-space"
+          data-aos="zoom-in"
+          data-aos-duration="1000"
+          data-aos-anchor-placement="top-bottom"
+        >
+          {" "}
+          Tech Stack
         </h2>
-        <div className="flex flex-wrap justify-center gap-4 mt-12 w-full">
+        <div className="flex flex-wrap justify-center gap-5 mt-12 w-full p-3">
           {skills.map((item, index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-items-center"
+              className="flex flex-col items-center justify-items-center group"
+              data-aos="zoom-out"
+              data-aos-duration="1100"
             >
-              <div className="p-4 rounded-2xl flex items-center justify-center border border-slate-800 hover:shadow-lg hover:shadow-sky-50 hover:border-0">
-                <div className="w-12 h-12">{item.svg}</div>
+              <div className="relative rounded-2xl flex items-center justify-center border border-slate-800 hover:border-0 transition-all p-4">
+                <div className="absolute -inset-1 bg-gradient-to-r from-slate-500 to-gray-500 rounded-3xl opacity-0 group-hover:opacity-60 blur transition duration-300"></div>
+                <div className="relative w-12 h-12 transform transition-transform duration-300 group-hover:scale-110">
+                  {item.svg}
+                </div>
               </div>
               <span className="text-sm font-semibold mt-2 text-white font-mono">
                 {item.skill}

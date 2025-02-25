@@ -8,6 +8,8 @@ import { loadFull } from "tsparticles";
 import "@fontsource/chakra-petch/400.css";
 import Project from "./components/Project";
 import Contact from "./components/Contact";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function App() {
   const [init, setInit] = useState(false);
@@ -23,6 +25,11 @@ function App() {
     }).then(() => {
       setInit(true);
     });
+
+    // Mencegah scroll horizontal yang tidak diinginkan
+    document.body.style.overflowX = "hidden";
+    AOS.init();
+    AOS.refresh();
   }, []);
 
   const options = useMemo(
@@ -248,13 +255,16 @@ function App() {
   );
 
   return (
-    <div className="relative w-full min-h-screen bg-gray-900">
+    <div className="relative w-full min-h-screen bg-gray-900 overflow-hidden scroll-smooth">
+      {/* Background Hitam Sementara Saat Particles Belum Siap */}
+      {!init && <div className="absolute inset-0 w-full h-full bg-black"></div>}
+
       {/* Particles sebagai background */}
       {init && (
         <Particles
           id="tsparticles"
           options={options}
-          className="absolute inset-0 w-full h-full"
+          className="absolute inset-0 w-full h-full z-0"
         />
       )}
 

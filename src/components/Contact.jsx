@@ -120,7 +120,11 @@ export default function Contact({ ref }) {
     >
       <div className="container px-6 py-12 mx-auto">
         <div className="text-center">
-          <h1 className="mt-24 text-2xl font-semibold  md:text-3xl text-white font-space">
+          <h1
+            className="mt-24 text-2xl font-semibold  md:text-3xl text-white font-space"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+          >
             Contact Us
           </h1>
         </div>
@@ -130,6 +134,8 @@ export default function Contact({ ref }) {
               <div
                 key={index}
                 className=" border border-gray-700 p-8 rounded-xl"
+                data-aos="zoom-in"
+                data-aos-duration={(index + 1) * 300}
               >
                 <span className="inline-block p-2.5 text-white rounded-full border border-gray-600 bg-transparent">
                   {item.icon}
@@ -156,7 +162,11 @@ export default function Contact({ ref }) {
               </div>
             ))}
           </div>
-          <div className="p-4 py-6 rounded-xl bg-transparent border border-gray-700 md:p-8">
+          <div
+            className="p-4 py-6 rounded-xl bg-transparent border border-gray-700 md:p-8"
+            data-aos="zoom-in"
+            data-aos-duration="1000"
+          >
             <form>
               <div>
                 <label

@@ -33,7 +33,11 @@ export default function Project({ ref }) {
       ref={ref}
     >
       <div className="text-center w-full max-w-5xl mt-36">
-        <h2 className="text-2xl font-bold text-white md:text-3xl font-space">
+        <h2
+          className="text-2xl font-bold text-white md:text-3xl font-space"
+          data-aos="fade-down"
+          data-aos-duration="1000"
+        >
           My Project
         </h2>
 
@@ -41,7 +45,9 @@ export default function Project({ ref }) {
           {projects.map((project, index) => (
             <article
               key={index}
-              className="overflow-hidden rounded-xl border border-gray-700 bg-transparent shadow-lg max-w-sm w-full"
+              className="overflow-hidden rounded-xl border border-gray-700 bg-transparent shadow-lg max-w-sm w-full "
+              data-aos="fade-up"
+              data-aos-duration={(index + 1) * 100 + 800}
             >
               <img
                 alt=""
