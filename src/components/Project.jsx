@@ -35,7 +35,7 @@ export default function Project({ ref }) {
       <div className="text-center w-full max-w-5xl mt-36">
         <h2
           className="text-2xl font-bold text-white md:text-3xl font-space"
-          data-aos="fade-down"
+          data-aos="zoom-in"
           data-aos-duration="1000"
         >
           My Project

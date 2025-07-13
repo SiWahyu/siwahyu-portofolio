@@ -28,8 +28,10 @@ function App() {
 
     // Mencegah scroll horizontal yang tidak diinginkan
     document.body.style.overflowX = "hidden";
-    AOS.init();
-    AOS.refresh();
+    AOS.init({
+      once: false,
+      mirror: true,
+    });
   }, []);
 
   const options = useMemo(

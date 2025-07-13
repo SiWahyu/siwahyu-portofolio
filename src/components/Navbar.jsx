@@ -27,7 +27,7 @@ export default function Navbar({
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-transparent bg-opacity-80 backdrop-blur-sm transition-all duration-100 z-50">
-      <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-6 py-3">
         <span
           className="flex items-center space-x-3 rtl:space-x-reverse"
           onClick={handleClick}

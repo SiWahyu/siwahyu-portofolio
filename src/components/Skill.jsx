@@ -475,8 +475,8 @@ export default function Skill({ ref }) {
               data-aos="zoom-out"
               data-aos-duration="1100"
             >
-              <div className="relative rounded-2xl flex items-center justify-center border border-slate-800 hover:border-0 transition-all p-4">
-                <div className="absolute -inset-1 bg-gradient-to-r from-slate-500 to-gray-500 rounded-3xl opacity-0 group-hover:opacity-60 blur transition duration-300"></div>
+              <div className="relative rounded-2xl flex items-center justify-center  transition-all p-3">
+                <div className="absolute -inset-1 bg-gradient-to-r from-slate-500 to-gray-500 rounded-3xl opacity-0 group-hover:opacity-40 blur transition duration-300"></div>
                 <div className="relative w-12 h-12 transform transition-transform duration-300 group-hover:scale-110">
                   {item.svg}
                 </div>

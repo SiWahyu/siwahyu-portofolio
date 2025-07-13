@@ -122,7 +122,7 @@ export default function Contact({ ref }) {
         <div className="text-center">
           <h1
             className="mt-24 text-2xl font-semibold  md:text-3xl text-white font-space"
-            data-aos="fade-down"
+            data-aos="zoom-out"
             data-aos-duration="1000"
           >
             Contact Us

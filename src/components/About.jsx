@@ -11,7 +11,7 @@ export default function About({ ref }) {
     >
       <div
         className="flex items-center justify-center w-full h-96 lg:w-1/2"
-        data-aos="fade-down"
+        data-aos="fade-right"
         data-aos-duration="1000"
       >
         <img
@@ -23,7 +23,7 @@ export default function About({ ref }) {
       </div>
       <div
         className="flex flex-col items-center w-full lg:flex-row lg:w-1/2"
-        data-aos="fade-up"
+        data-aos="fade-left"
         data-aos-duration="1000"
       >
         <div className="max-w-lg lg:mx-12 border border-gray-800 p-7 rounded-3xl m-3">
