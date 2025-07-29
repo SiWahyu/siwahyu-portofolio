@@ -11,6 +11,7 @@ export default function Project({ ref }) {
                         excel.`,
       img: imgPresensi,
       tech: ["PHP", "Laravel", "MySQL", "Bootstrap", "jQuery"],
+      link: "https://github.com/SiWahyu",
     },
     {
       name: "POS System",
@@ -19,12 +20,14 @@ export default function Project({ ref }) {
                         data member customer.`,
       img: imgPOS,
       tech: ["PHP", "Laravel", "MySQL", "Bootstrap", "jQuery", "Midtrans"],
+      link: "https://github.com/SiWahyu",
     },
     {
       name: "Sepatu Online",
       deskrip: `aplikasi toko sepatu online yang memungkinkan pelanggan untuk mencari, memilih, dan memesan sepatu favorit mereka dengan mudah. Dengan tampilan yang modern dan responsif, aplikasi ini memberikan pengalaman berbelanja yang nyaman dan cepat.`,
       img: imgTokoSepatu,
       tech: ["PHP", "Laravel", "MySQL", "Bootstrap", "Midtrans"],
+      link: "https://github.com/SiWahyu",
     },
   ];
   return (
@@ -56,17 +59,20 @@ export default function Project({ ref }) {
               />
 
               <div className="p-4 sm:p-6 text-left">
-                <a href="#">
+                <span href="#">
                   <h3 className="text-lg font-bold text-white font-space">
                     {project.name}
                   </h3>
-                </a>
+                </span>
 
                 <p className="mt-2 line-clamp-3 text-sm text-white text-justify">
                   {project.deskrip}
                 </p>
 
-                <a className="group mt-3 inline-flex items-center gap-1 text-sm font-medium text-slate-300">
+                <a
+                  href={project.link}
+                  className="group mt-3 inline-flex items-center gap-1 text-sm font-medium text-slate-300"
+                >
                   Find out more
                   <span
                     aria-hidden="true"
