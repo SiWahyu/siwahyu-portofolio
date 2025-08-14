@@ -10,6 +10,7 @@ import Project from "./components/Project";
 import Contact from "./components/Contact";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import PlayMusic from "./components/PlayMusic";
 
 function App() {
   const [init, setInit] = useState(false);
@@ -257,35 +258,41 @@ function App() {
   );
 
   return (
-    <div className="relative w-full min-h-screen bg-gray-900 overflow-hidden scroll-smooth">
-      {/* Background Hitam Sementara Saat Particles Belum Siap */}
-      {!init && <div className="absolute inset-0 w-full h-full bg-black"></div>}
+    <>
+      <PlayMusic />
 
-      {/* Particles sebagai background */}
-      {init && (
-        <Particles
-          id="tsparticles"
-          options={options}
-          className="absolute inset-0 w-full h-full z-0"
-        />
-      )}
+      <div className="relative w-full min-h-screen bg-gray-900 overflow-hidden scroll-smooth">
+        {/* Background Hitam Sementara Saat Particles Belum Siap */}
+        {!init && (
+          <div className="absolute inset-0 w-full h-full bg-black"></div>
+        )}
 
-      {/* Konten di atas Particles */}
-      <div className="relative z-10">
-        <Navbar
-          aboutRef={aboutRef}
-          skillRef={skillRef}
-          heroRef={heroRef}
-          projectRef={projectRef}
-          contactRef={contactRef}
-        />
-        <Hero aboutRef={aboutRef} ref={heroRef} />
-        <About ref={aboutRef} />
-        <Skill ref={skillRef} />
-        <Project ref={projectRef} />
-        <Contact ref={contactRef} />
+        {/* Particles sebagai background */}
+        {init && (
+          <Particles
+            id="tsparticles"
+            options={options}
+            className="absolute inset-0 w-full h-full z-0"
+          />
+        )}
+
+        {/* Konten di atas Particles */}
+        <div className="relative z-10">
+          <Navbar
+            aboutRef={aboutRef}
+            skillRef={skillRef}
+            heroRef={heroRef}
+            projectRef={projectRef}
+            contactRef={contactRef}
+          />
+          <Hero aboutRef={aboutRef} ref={heroRef} />
+          <About ref={aboutRef} />
+          <Skill ref={skillRef} />
+          <Project ref={projectRef} />
+          <Contact ref={contactRef} />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
