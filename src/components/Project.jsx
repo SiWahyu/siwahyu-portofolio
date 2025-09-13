@@ -1,6 +1,9 @@
+/* eslint-disable react/prop-types */
 import imgPOS from "../assets/projects/pos.jpg";
 import imgPresensi from "../assets/projects/presensi.jpg";
 import imgTokoSepatu from "../assets/projects/toko-sepatu.jpg";
+import imgCloneTokopedia from "../assets/projects/clone-tokopedia.png";
+import imgCloneInstagram from "../assets/projects/clone-instagram.png";
 
 export default function Project({ ref }) {
   const projects = [
@@ -11,6 +14,7 @@ export default function Project({ ref }) {
                         excel.`,
       img: imgPresensi,
       tech: ["PHP", "Laravel", "MySQL", "Bootstrap", "jQuery"],
+      status: "Done",
       link: "https://github.com/SiWahyu",
     },
     {
@@ -20,6 +24,7 @@ export default function Project({ ref }) {
                         data member customer.`,
       img: imgPOS,
       tech: ["PHP", "Laravel", "MySQL", "Bootstrap", "jQuery", "Midtrans"],
+      status: "Done",
       link: "https://github.com/SiWahyu",
     },
     {
@@ -27,6 +32,30 @@ export default function Project({ ref }) {
       deskrip: `aplikasi toko sepatu online yang memungkinkan pelanggan untuk mencari, memilih, dan memesan sepatu favorit mereka dengan mudah. Dengan tampilan yang modern dan responsif, aplikasi ini memberikan pengalaman berbelanja yang nyaman dan cepat.`,
       img: imgTokoSepatu,
       tech: ["PHP", "Laravel", "MySQL", "Bootstrap", "Midtrans"],
+      status: "Done",
+      link: "https://github.com/SiWahyu",
+    },
+    {
+      name: "Clone Tokopedia",
+      deskrip: `Clone Aplikasi Tokopedia yang menggunakan React dan Tailwind`,
+      img: imgCloneTokopedia,
+      tech: ["React", "Tailwind", "DaisyUI"],
+      status: "On Progress",
+      link: "https://github.com/SiWahyu",
+    },
+    {
+      name: "Clone Instagram",
+      deskrip: `Clone Instagram Versi Mobile menggunakan React dan Tailwind Sebagai FE, Laravel Sebagai BE dan Supabase PostgreSQL Sebagai Database`,
+      img: imgCloneInstagram,
+      tech: [
+        "React",
+        "Tailwind",
+        "DaisyUI",
+        "Laravel",
+        "Supabase",
+        "PostgreSQL",
+      ],
+      status: "On Progress",
       link: "https://github.com/SiWahyu",
     },
   ];
@@ -44,11 +73,11 @@ export default function Project({ ref }) {
           My Project
         </h2>
 
-        <div className="flex flex-wrap justify-center gap-6 mt-6 w-full py-6">
+        <div className="flex flex-wrap justify-center gap-6 mt-6 w-full py-6 px-3 sm:px-0">
           {projects.map((project, index) => (
-            <article
+            <div
               key={index}
-              className="overflow-hidden rounded-xl border border-gray-700 bg-transparent shadow-lg max-w-sm w-full "
+              className="overflow-hidden rounded-xl border border-neutral-700 bg-transparent shadow-lg max-w-sm w-full "
               data-aos="fade-up"
               data-aos-duration={(index + 1) * 100 + 800}
             >
@@ -85,17 +114,19 @@ export default function Project({ ref }) {
                   <div className="text-sm font-mono font-semibold mb-1.5">
                     Tech stack
                   </div>
-                  {project.tech.map((item, index) => (
-                    <span
-                      key={index}
-                      className="badge border border-gray-400  badge-outline py-2.5 m-1"
-                    >
-                      {item}
-                    </span>
-                  ))}
+                  <div className="flex flex-wrap gap-2">
+                    {project.tech.map((item, index) => (
+                      <span
+                        key={index}
+                        className="badge border-neutral-500 border-2  badge-outline py-3"
+                      >
+                        {item}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </article>
+            </div>
           ))}
         </div>
       </div>

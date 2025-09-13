@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+// eslint-disable-next-line react/prop-types
 export default function Contact({ ref }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -45,7 +46,7 @@ export default function Contact({ ref }) {
           }
         })
         .catch((error) => {
-          console.log("failed");
+          console.log(error);
         });
       setSendMessage(true);
       setName("");
@@ -133,11 +134,11 @@ export default function Contact({ ref }) {
             {socialMedia.map((item, index) => (
               <div
                 key={index}
-                className=" border border-gray-700 p-8 rounded-xl"
+                className=" border border-neutral-700 p-8 rounded-xl"
                 data-aos="zoom-in"
                 data-aos-duration={(index + 1) * 300}
               >
-                <span className="inline-block p-2.5 text-white rounded-full border border-gray-600 bg-transparent">
+                <span className="inline-block p-2.5 text-white rounded-full border border-neutral-600 bg-transparent">
                   {item.icon}
                 </span>
                 <h2 className="mt-4 text-base font-semibold text-white font-space">
@@ -163,14 +164,14 @@ export default function Contact({ ref }) {
             ))}
           </div>
           <div
-            className="p-4 py-6 rounded-xl bg-transparent border border-gray-700 md:p-8"
+            className="p-4 py-6 rounded-xl bg-transparent border border-neutral-700 md:p-8"
             data-aos="zoom-in"
             data-aos-duration="1000"
           >
             <form>
               <div>
                 <label
-                  className="block mb-2 text-sm text-gray-200"
+                  className="block mb-2 text-sm text-neutral-200"
                   htmlFor="full_name"
                 >
                   Nama Lengkap
@@ -181,12 +182,12 @@ export default function Contact({ ref }) {
                   value={name}
                   onChange={handleChangeName}
                   placeholder="John "
-                  className="block w-full px-5 py-2.5 mt-2 border rounded-lg placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                  className="block w-full px-5 py-2.5 mt-2 border rounded-lg placeholder-neutral-600 bg-neutral-900 text-neutral-100 border-neutral-700 focus:outline-none placeholder:text-neutral-400"
                 />
               </div>
               <div className="mt-4">
                 <label
-                  className="block mb-2 text-sm text-gray-200"
+                  className="block mb-2 text-sm text-neutral-200"
                   htmlFor="email"
                 >
                   Email
@@ -197,19 +198,19 @@ export default function Contact({ ref }) {
                   value={email}
                   onChange={handleChangeEmail}
                   placeholder="johndoe@example.com"
-                  className="block w-full px-5 py-2.5 mt-2 border rounded-lg placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                  className="block w-full px-5 py-2.5 mt-2 border rounded-lg placeholder-neutral-600 bg-neutral-900 text-neutral-100 border-neutral-700 focus:outline-none placeholder:text-neutral-400"
                 />
               </div>
               <div className="w-full mt-4">
                 <label
-                  className="block mb-2 text-sm text-gray-200"
+                  className="block mb-2 text-sm text-neutral-200"
                   htmlFor="message"
                 >
                   Pesan
                 </label>
                 <textarea
                   id="message"
-                  className="block w-full h-32 px-5 py-2.5 mt-2  border  rounded-lg md:h-56 placeholder-gray-600 bg-gray-900 text-gray-300 border-gray-700 focus:border-blue-400  focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40"
+                  className="block w-full h-32 px-5 py-2.5 mt-2  border  rounded-lg md:h-56 placeholder-neutral-600 bg-neutral-900 text-neutral-100 border-neutral-700  focus:outline-none placeholder:text-neutral-400"
                   placeholder="Pesan"
                   value={message}
                   onChange={handleChangeMessage}
@@ -217,14 +218,14 @@ export default function Contact({ ref }) {
               </div>
               {!sendMessage ? (
                 <button
-                  className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform border border-gray-700 rounded-lg hover:bg-gray-50 focus:outline-none focus:ring focus:ring-gray-100 focus:ring-opacity-50 hover:text-gray-900"
+                  className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform border border-neutral-700 rounded-lg hover:bg-neutral-200 focus:outline-none focus:ring focus:ring-neutral-100 focus:ring-opacity-50 hover:text-black"
                   onClick={handleSendMessage}
                 >
                   🚀 Kirim Pesan
                 </button>
               ) : (
                 <button
-                  className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide capitalize transition-colors duration-300 transform border border-gray-700 rounded-lg bg-gray-50 text-gray-900"
+                  className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide capitalize transition-colors duration-300 transform border border-neutral-700 rounded-lg bg-neutral-50 text-neutral-900"
                   onClick={handleSendMessage}
                 >
                   ✨ Selesai

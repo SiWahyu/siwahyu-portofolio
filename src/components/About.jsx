@@ -1,9 +1,7 @@
 import aboutImage from "../assets/about.svg";
 
+// eslint-disable-next-line react/prop-types
 export default function About({ ref }) {
-  const handleStartRef = () => {
-    aboutRef.current.scrollIntoView({ behavior: "smooth" });
-  };
   return (
     <div
       className="container min-h-screen flex flex-col mx-auto space-y-6 lg:py-16 lg:flex-row lg:items-center justify-center bg-transparent"

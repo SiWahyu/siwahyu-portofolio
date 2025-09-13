@@ -6,7 +6,7 @@ export default function PlayMusic() {
 
   useEffect(() => {
     const audio = audioRef.current;
-    audio.volume = 0.2; // Set volume 50%
+    audio.volume = 0.2;
     const playAudio = async () => {
       try {
         await audioRef.current.play();
