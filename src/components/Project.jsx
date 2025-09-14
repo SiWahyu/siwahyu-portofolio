@@ -98,11 +98,24 @@ export default function Project({ ref }) {
                   {project.deskrip}
                 </p>
 
+                <p className={`mt-2 line-clamp-3 text-sm`}>
+                  <span className="font-medium text-white">Status :</span>{" "}
+                  <span
+                    className={`font-semibold ${
+                      project.status === "Done"
+                        ? "text-blue-500"
+                        : "text-yellow-400"
+                    }`}
+                  >
+                    {project.status}
+                  </span>
+                </p>
+
                 <a
                   href={project.link}
                   className="group mt-3 inline-flex items-center gap-1 text-sm font-medium text-slate-300"
                 >
-                  Find out more
+                  View Project
                   <span
                     aria-hidden="true"
                     className="block transition-all group-hover:ms-0.5"
