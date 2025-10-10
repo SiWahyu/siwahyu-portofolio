@@ -11,6 +11,7 @@ import Contact from "./components/Contact";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import PlayMusic from "./components/PlayMusic";
+import { ThemeProvider } from "./components/theme-provider";
 
 function App() {
   const [init, setInit] = useState(false);
@@ -258,7 +259,7 @@ function App() {
   );
 
   return (
-    <>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <PlayMusic />
 
       <div className="relative w-full min-h-screen bg-gray-900 overflow-hidden scroll-smooth">
@@ -292,7 +293,7 @@ function App() {
           <Contact ref={contactRef} />
         </div>
       </div>
-    </>
+    </ThemeProvider>
   );
 }
 

@@ -1,4 +1,8 @@
-import aboutImage from "../assets/about.svg";
+import {
+  Terminal,
+  TypingAnimation,
+  AnimatedSpan,
+} from "@/components/ui/shadcn-io/terminal";
 
 // eslint-disable-next-line react/prop-types
 export default function About({ ref }) {
@@ -12,12 +16,40 @@ export default function About({ ref }) {
         data-aos="fade-right"
         data-aos-duration="1000"
       >
-        <img
-          className="object-cover rounded-md"
-          src={aboutImage}
-          alt="apple watch photo"
-          width={"530px"}
-        />
+        <Terminal>
+          <AnimatedSpan delay={0}>
+            <div>
+              <span className="text-yellow-200">$</span> whoami
+            </div>
+          </AnimatedSpan>
+          <TypingAnimation delay={500}>
+            I'm SiWahyu — Backend & Web Developer 🖥️
+          </TypingAnimation>
+          <AnimatedSpan delay={3500}>
+            <div>
+              <span className="text-yellow-200">$ </span>skills --list
+            </div>
+          </AnimatedSpan>
+          <TypingAnimation delay={4000}>
+            PHP, Laravel, Javascript, React JS, Next.js
+          </TypingAnimation>
+          <AnimatedSpan delay={7500}>
+            <div>
+              <span className="text-yellow-200">$ </span>mission
+            </div>
+          </AnimatedSpan>
+          <TypingAnimation delay={8000}>
+            Crafting clean, efficient, and meaningful code ✨
+          </TypingAnimation>
+          <AnimatedSpan delay={11000}>
+            <div>
+              <span className="text-yellow-200">$ </span>status
+            </div>
+          </AnimatedSpan>
+          <TypingAnimation delay={11500} duration={80}>
+            {`> Always learning. Always building. 🚀`}
+          </TypingAnimation>
+        </Terminal>
       </div>
       <div
         className="flex flex-col items-center w-full lg:flex-row lg:w-1/2"

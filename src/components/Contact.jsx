@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SpotlightCard from "../components/SpotlightCard/SpotlightCard";
 
 // eslint-disable-next-line react/prop-types
 export default function Contact({ ref }) {
@@ -116,7 +117,7 @@ export default function Contact({ ref }) {
 
   return (
     <section
-      className="min-h-screen bg-transparent flex justify-center items-center"
+      className="min-h-screen flex justify-center items-center "
       ref={ref}
     >
       <div className="container px-6 py-12 mx-auto">
@@ -132,11 +133,10 @@ export default function Contact({ ref }) {
         <div className="grid grid-cols-1 gap-12 mt-12 lg:grid-cols-2">
           <div className="grid grid-cols-1 gap-12 md:grid-cols-2 justify-center items-center">
             {socialMedia.map((item, index) => (
-              <div
+              <SpotlightCard
+                className="custom-spotlight-card bg-neutral-950/5"
+                spotlightColor="rgba(0, 229, 255, 0.2)"
                 key={index}
-                className=" border border-neutral-700 p-8 rounded-xl"
-                data-aos="zoom-in"
-                data-aos-duration={(index + 1) * 300}
               >
                 <span className="inline-block p-2.5 text-white rounded-full border border-neutral-600 bg-transparent">
                   {item.icon}
@@ -160,7 +160,7 @@ export default function Contact({ ref }) {
                     &rarr;
                   </span>
                 </a>
-              </div>
+              </SpotlightCard>
             ))}
           </div>
           <div
