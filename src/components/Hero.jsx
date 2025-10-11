@@ -2,6 +2,7 @@ import { TypeAnimation } from "react-type-animation";
 import siwahyuImage from "../assets/siwahyu.png";
 import FadeContent from "@/components/FadeContent";
 import AnimatedContent from "@/components/AnimatedContent";
+import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
 
 export default function Hero({ aboutRef, ref }) {
   const handleStartButton = () => {
@@ -62,12 +63,12 @@ export default function Hero({ aboutRef, ref }) {
               threshold={0.1}
               delay={0}
             >
-              <button
-                className="btn bg-transparent font-bold border border-gray-700 text-white hover:bg-slate-200 hover:text-gray-800 mt-8 px-10 py-3 font-mono transition duration-300"
+              <InteractiveHoverButton
+                className="border border-gray-700 rounded-lg py-3 px-10 font-mono mt-8"
                 onClick={handleStartButton}
               >
-                <span className="mr-1">🚀</span> Mulai
-              </button>
+                🚀 Mulai
+              </InteractiveHoverButton>
             </AnimatedContent>
           </div>
         </div>

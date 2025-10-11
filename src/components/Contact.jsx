@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SpotlightCard from "../components/SpotlightCard/SpotlightCard";
 import { ShineBorder } from "@/components/ui/shine-border";
+import { MagicCard } from "@/components/ui/magic-card";
 
 // eslint-disable-next-line react/prop-types
 export default function Contact({ ref }) {
@@ -170,78 +171,74 @@ export default function Contact({ ref }) {
               </SpotlightCard>
             ))}
           </div>
-          <div className="p-4 py-6 rounded-xl bg-transparent border border-neutral-700 md:p-8 relative overflow-hidden">
-            <ShineBorder
-              shineColor="#C0C0C0"
-              duration={12}
-              borderWidth={1.5}
-              style={{ position: "absolute", top: 0, left: 0 }}
-            />
-            <form>
-              <div>
-                <label
-                  className="block mb-2 text-sm text-neutral-200"
-                  htmlFor="full_name"
-                >
-                  Nama Lengkap
-                </label>
-                <input
-                  id="full_name"
-                  type="text"
-                  value={name}
-                  onChange={handleChangeName}
-                  placeholder="John "
-                  className="block w-full px-5 py-2.5 mt-2 border rounded-lg bg-neutral-900 text-neutral-100 border-neutral-700 focus:outline-none placeholder:text-neutral-400"
-                />
-              </div>
-              <div className="mt-4">
-                <label
-                  className="block mb-2 text-sm text-neutral-200"
-                  htmlFor="email"
-                >
-                  Email
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  value={email}
-                  onChange={handleChangeEmail}
-                  placeholder="johndoe@example.com"
-                  className="block w-full px-5 py-2.5 mt-2 border rounded-lg placeholder-neutral-600 bg-neutral-900 text-neutral-100 border-neutral-700 focus:outline-none placeholder:text-neutral-400"
-                />
-              </div>
-              <div className="w-full mt-4">
-                <label
-                  className="block mb-2 text-sm text-neutral-200"
-                  htmlFor="message"
-                >
-                  Pesan
-                </label>
-                <textarea
-                  id="message"
-                  className="block w-full h-32 px-5 py-2.5 mt-2  border  rounded-lg md:h-56 placeholder-neutral-600 bg-neutral-900 text-neutral-100 border-neutral-700  focus:outline-none placeholder:text-neutral-400"
-                  placeholder="Pesan"
-                  value={message}
-                  onChange={handleChangeMessage}
-                />
-              </div>
-              {!sendMessage ? (
-                <button
-                  className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform border border-neutral-700 rounded-lg hover:bg-neutral-200 focus:outline-none focus:ring focus:ring-neutral-100 focus:ring-opacity-50 hover:text-black"
-                  onClick={handleSendMessage}
-                >
-                  🚀 Kirim Pesan
-                </button>
-              ) : (
-                <button
-                  className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide capitalize transition-colors duration-300 transform border border-neutral-700 rounded-lg bg-neutral-50 text-neutral-900"
-                  onClick={handleSendMessage}
-                >
-                  ✨ Selesai
-                </button>
-              )}
-            </form>
-          </div>
+          <MagicCard className="rounded-xl">
+            <div className="px-6 py-6 rounded-xl bg-transparent">
+              <form>
+                <div>
+                  <label
+                    className="block mb-2 text-sm text-neutral-200"
+                    htmlFor="full_name"
+                  >
+                    Nama Lengkap
+                  </label>
+                  <input
+                    id="full_name"
+                    type="text"
+                    value={name}
+                    onChange={handleChangeName}
+                    placeholder="John "
+                    className="block w-full px-5 py-2.5 mt-2 border rounded-lg bg-neutral-900 text-neutral-100 border-neutral-700 focus:outline-none placeholder:text-neutral-400"
+                  />
+                </div>
+                <div className="mt-4">
+                  <label
+                    className="block mb-2 text-sm text-neutral-200"
+                    htmlFor="email"
+                  >
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    type="email"
+                    value={email}
+                    onChange={handleChangeEmail}
+                    placeholder="johndoe@example.com"
+                    className="block w-full px-5 py-2.5 mt-2 border rounded-lg placeholder-neutral-600 bg-neutral-900 text-neutral-100 border-neutral-700 focus:outline-none placeholder:text-neutral-400"
+                  />
+                </div>
+                <div className="w-full mt-4">
+                  <label
+                    className="block mb-2 text-sm text-neutral-200"
+                    htmlFor="message"
+                  >
+                    Pesan
+                  </label>
+                  <textarea
+                    id="message"
+                    className="block w-full h-32 px-5 py-2.5 mt-2  border  rounded-lg md:h-56 placeholder-neutral-600 bg-neutral-900 text-neutral-100 border-neutral-700  focus:outline-none placeholder:text-neutral-400"
+                    placeholder="Pesan"
+                    value={message}
+                    onChange={handleChangeMessage}
+                  />
+                </div>
+                {!sendMessage ? (
+                  <button
+                    className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform border border-neutral-700 rounded-lg hover:bg-neutral-200 focus:outline-none focus:ring focus:ring-neutral-100 focus:ring-opacity-50 hover:text-black"
+                    onClick={handleSendMessage}
+                  >
+                    🚀 Kirim Pesan
+                  </button>
+                ) : (
+                  <button
+                    className="w-full px-6 py-3 mt-4 text-sm font-medium tracking-wide capitalize transition-colors duration-300 transform border border-neutral-700 rounded-lg bg-neutral-50 text-neutral-900"
+                    onClick={handleSendMessage}
+                  >
+                    ✨ Selesai
+                  </button>
+                )}
+              </form>
+            </div>
+          </MagicCard>
         </div>
       </div>
     </section>

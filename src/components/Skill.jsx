@@ -1,6 +1,7 @@
 import { forwardRef, useRef } from "react";
 import { AnimatedBeam } from "@/components/ui/animated-beam";
 import { cn } from "@/lib/utils";
+import { ShineBorder } from "@/components/ui/shine-border";
 
 const Circle = forwardRef(({ className, children }, ref) => {
   return (
@@ -200,9 +201,6 @@ export default function Skill({ ref }) {
   const div9Ref = useRef(null);
   const div10Ref = useRef(null);
 
-  const length = Object.keys(Icons).length;
-  console.log(length);
-
   return (
     <div
       className="relative flex h-[500px] w-full items-center justify-center overflow-hidden p-10"
@@ -233,8 +231,14 @@ export default function Skill({ ref }) {
         <div className="flex items-center justify-center">
           <Circle
             ref={centerRef}
-            className="rounded-lg font-space p-0 w-auto px-3 font-bold bg-neutral-800 border border-neutral-600"
+            className="rounded-xl font-space p-0 w-auto px-3 font-bold bg-neutral-800 border border-neutral-600 relative overflow-hidden"
           >
+            <ShineBorder
+              shineColor="#0096ff"
+              duration={5}
+              borderWidth={2}
+              style={{ position: "absolute", top: 0, left: 0 }}
+            />
             Tech Stack
           </Circle>
         </div>
