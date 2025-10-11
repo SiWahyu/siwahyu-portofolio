@@ -6,6 +6,8 @@ export default function Navbar({
   heroRef,
   projectRef,
   contactRef,
+  activeSection,
+  setActiveSection,
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -13,14 +15,19 @@ export default function Navbar({
     const key = e.target.name;
 
     if (key === "Home") {
+      setActiveSection("Home");
       heroRef.current.scrollIntoView({ behavior: "smooth" });
     } else if (key === "About") {
+      setActiveSection("About");
       aboutRef.current.scrollIntoView({ behavior: "smooth" });
     } else if (key === "Skill") {
+      setActiveSection("Skill");
       skillRef.current.scrollIntoView({ behavior: "smooth" });
     } else if (key === "Project") {
+      setActiveSection("Project");
       projectRef.current.scrollIntoView({ behavior: "smooth" });
     } else if (key === "Contact") {
+      setActiveSection("Contact");
       contactRef.current.scrollIntoView({ behavior: "smooth" });
     }
   };
@@ -66,7 +73,11 @@ export default function Navbar({
           <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 font-mono">
             <li>
               <button
-                className={`block py-2 px-3 text-white rounded-sm md:hover:bg-transparent hover:text-slate-300 md:p-0`}
+                className={`block py-2 px-3  rounded-sm md:hover:bg-transparent  md:p-0 ${
+                  activeSection === "Home"
+                    ? "text-white font-medium"
+                    : "text-neutral-400"
+                }`}
                 onClick={handleClick}
                 name="Home"
               >
@@ -76,7 +87,11 @@ export default function Navbar({
             <li>
               <button
                 onClick={handleClick}
-                className={`block py-2 px-3 text-white rounded-sm md:hover:bg-transparent hover:text-slate-300 md:p-0`}
+                className={`block py-2 px-3  rounded-sm md:hover:bg-transparent md:p-0 ${
+                  activeSection === "About"
+                    ? "text-white font-medium"
+                    : "text-neutral-400"
+                }`}
                 name="About"
               >
                 About
@@ -85,7 +100,11 @@ export default function Navbar({
             <li>
               <button
                 onClick={handleClick}
-                className={`block py-2 px-3 text-white rounded-sm md:hover:bg-transparent hover:text-slate-300 md:p-0`}
+                className={`block py-2 px-3  rounded-sm md:hover:bg-transparent md:p-0 ${
+                  activeSection === "Skill"
+                    ? "text-white font-medium"
+                    : "text-neutral-400"
+                }`}
                 name="Skill"
               >
                 Skill
@@ -94,7 +113,11 @@ export default function Navbar({
             <li>
               <button
                 onClick={handleClick}
-                className={`block py-2 px-3 text-white rounded-sm md:hover:bg-transparent hover:text-slate-300 md:p-0`}
+                className={`block py-2 px-3  rounded-sm md:hover:bg-transparent md:p-0 ${
+                  activeSection === "Project"
+                    ? "text-white font-medium"
+                    : "text-neutral-400"
+                }`}
                 name="Project"
               >
                 Project
@@ -103,7 +126,11 @@ export default function Navbar({
             <li>
               <button
                 onClick={handleClick}
-                className={`block py-2 px-3 text-white rounded-sm md:hover:bg-transparent hover:text-slate-300 md:p-0`}
+                className={`block py-2 px-3  rounded-sm md:hover:bg-transparent md:p-0 ${
+                  activeSection === "Contact"
+                    ? "text-white font-medium"
+                    : "text-neutral-400"
+                }`}
                 name="Contact"
               >
                 Contact

@@ -62,10 +62,10 @@ export default function Project({ ref }) {
   ];
   return (
     <div
-      className="min-h-screen flex flex-col items-center justify-center"
+      className="min-h-screen flex flex-col items-center justify-center scroll-mt-32"
       ref={ref}
     >
-      <div className="text-center w-full max-w-5xl mt-36">
+      <div className="text-center w-full max-w-5xl">
         <h2
           className="text-2xl font-bold text-white md:text-3xl font-space"
           data-aos="zoom-in"

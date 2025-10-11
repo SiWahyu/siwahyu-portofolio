@@ -21,6 +21,40 @@ function App() {
   const projectRef = useRef(null);
   const contactRef = useRef(null);
 
+  const [activeSection, setActiveSection] = useState("Home");
+
+  useEffect(() => {
+    const sections = [
+      { name: "Home", ref: heroRef },
+      { name: "About", ref: aboutRef },
+      { name: "Skill", ref: skillRef },
+      { name: "Project", ref: projectRef },
+      { name: "Contact", ref: contactRef },
+    ];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const section = sections.find(
+              (s) => s.ref.current === entry.target
+            );
+            if (section) {
+              setActiveSection(section.name);
+            }
+          }
+        });
+      },
+      { threshold: 0.6 } // 60% visible
+    );
+
+    sections.forEach((section) => {
+      if (section.ref.current) observer.observe(section.ref.current);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   useEffect(() => {
     initParticlesEngine(async (engine) => {
       await loadFull(engine);
@@ -28,7 +62,6 @@ function App() {
       setInit(true);
     });
 
-    // Mencegah scroll horizontal yang tidak diinginkan
     document.body.style.overflowX = "hidden";
     AOS.init({
       once: false,
@@ -285,6 +318,8 @@ function App() {
             heroRef={heroRef}
             projectRef={projectRef}
             contactRef={contactRef}
+            activeSection={activeSection}
+            setActiveSection={setActiveSection}
           />
           <Hero aboutRef={aboutRef} ref={heroRef} />
           <About ref={aboutRef} />

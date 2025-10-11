@@ -24,7 +24,7 @@ export default function About({ ref }) {
               <span className="text-yellow-200">$</span> whoami
             </div>
           </AnimatedSpan>
-          <TypingAnimation delay={500}>
+          <TypingAnimation delay={1000}>
             I'm SiWahyu — Backend & Web Developer 🖥️
           </TypingAnimation>
           <AnimatedSpan delay={3500}>
