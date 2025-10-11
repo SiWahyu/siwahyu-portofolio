@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SpotlightCard from "../components/SpotlightCard/SpotlightCard";
+import { ShineBorder } from "@/components/ui/shine-border";
 
 // eslint-disable-next-line react/prop-types
 export default function Contact({ ref }) {
@@ -134,10 +135,16 @@ export default function Contact({ ref }) {
           <div className="grid grid-cols-1 gap-12 md:grid-cols-2 justify-center items-center">
             {socialMedia.map((item, index) => (
               <SpotlightCard
-                className="custom-spotlight-card bg-neutral-950/5"
+                className="custom-spotlight-card bg-neutral-950/5 relative overflow-hidden"
                 spotlightColor="rgba(0, 229, 255, 0.2)"
                 key={index}
               >
+                <ShineBorder
+                  shineColor="#C0C0C0"
+                  duration={12}
+                  borderWidth={1.5}
+                  style={{ position: "absolute", top: 0, left: 0 }}
+                />
                 <span className="inline-block p-2.5 text-white rounded-full border border-neutral-600 bg-transparent">
                   {item.icon}
                 </span>
@@ -163,11 +170,13 @@ export default function Contact({ ref }) {
               </SpotlightCard>
             ))}
           </div>
-          <div
-            className="p-4 py-6 rounded-xl bg-transparent border border-neutral-700 md:p-8"
-            data-aos="zoom-in"
-            data-aos-duration="1000"
-          >
+          <div className="p-4 py-6 rounded-xl bg-transparent border border-neutral-700 md:p-8 relative overflow-hidden">
+            <ShineBorder
+              shineColor="#C0C0C0"
+              duration={12}
+              borderWidth={1.5}
+              style={{ position: "absolute", top: 0, left: 0 }}
+            />
             <form>
               <div>
                 <label
@@ -182,7 +191,7 @@ export default function Contact({ ref }) {
                   value={name}
                   onChange={handleChangeName}
                   placeholder="John "
-                  className="block w-full px-5 py-2.5 mt-2 border rounded-lg placeholder-neutral-600 bg-neutral-900 text-neutral-100 border-neutral-700 focus:outline-none placeholder:text-neutral-400"
+                  className="block w-full px-5 py-2.5 mt-2 border rounded-lg bg-neutral-900 text-neutral-100 border-neutral-700 focus:outline-none placeholder:text-neutral-400"
                 />
               </div>
               <div className="mt-4">

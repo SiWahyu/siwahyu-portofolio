@@ -4,6 +4,7 @@ import imgPresensi from "../assets/projects/presensi.jpg";
 import imgTokoSepatu from "../assets/projects/toko-sepatu.jpg";
 import imgCloneTokopedia from "../assets/projects/clone-tokopedia.png";
 import imgCloneInstagram from "../assets/projects/clone-instagram.png";
+import { ShineBorder } from "@/components/ui/shine-border";
 
 export default function Project({ ref }) {
   const projects = [
@@ -77,10 +78,17 @@ export default function Project({ ref }) {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="overflow-hidden rounded-xl border border-neutral-700 bg-transparent shadow-lg max-w-sm w-full "
+              className="overflow-hidden border border-neutral-800 bg-transparent shadow-lg max-w-sm w-full relative rounded-xl "
               data-aos="fade-up"
               data-aos-duration={(index + 1) * 100 + 800}
             >
+              <ShineBorder
+                shineColor="#C0C0C0"
+                duration={10}
+                borderWidth={1}
+                className="rounded-xl"
+                style={{ position: "absolute", top: 0, left: 0 }}
+              />
               <img
                 alt=""
                 src={project.img}
@@ -131,7 +139,7 @@ export default function Project({ ref }) {
                     {project.tech.map((item, index) => (
                       <span
                         key={index}
-                        className="badge border-neutral-500 border-2  badge-outline py-3"
+                        className="border border-slate-50/50 px-2 rounded-lg"
                       >
                         {item}
                       </span>

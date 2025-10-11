@@ -262,7 +262,7 @@ function App() {
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <PlayMusic />
 
-      <div className="relative w-full min-h-screen bg-gray-900 overflow-hidden scroll-smooth">
+      <div className="relative w-full min-h-screen bg-black overflow-hidden scroll-smooth">
         {/* Background Hitam Sementara Saat Particles Belum Siap */}
         {!init && (
           <div className="absolute inset-0 w-full h-full bg-black"></div>
