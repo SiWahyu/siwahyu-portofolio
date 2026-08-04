@@ -1,7 +1,6 @@
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 import { useEffect, useMemo, useState } from "react";
-import AOS from "aos";
 
 // eslint-disable-next-line react/prop-types
 export default function AppLayout({ children }) {
@@ -15,10 +14,6 @@ export default function AppLayout({ children }) {
     });
 
     document.body.style.overflowX = "hidden";
-    AOS.init({
-      once: false,
-      mirror: true,
-    });
   }, []);
 
   const options = useMemo(

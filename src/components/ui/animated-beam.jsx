@@ -1,7 +1,7 @@
 import { useEffect, useId, useState } from "react";
-import { motion } from "motion/react"
+import { motion } from "motion/react";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 export const AnimatedBeam = ({
   className,
@@ -9,6 +9,7 @@ export const AnimatedBeam = ({
   fromRef,
   toRef,
   curvature = 0,
+  bendGap, // override manual jarak titik belok dari center (opsional)
   reverse = false, // Include the reverse prop
   duration = Math.random() * 3 + 4,
   delay = 0,
@@ -22,9 +23,9 @@ export const AnimatedBeam = ({
   endXOffset = 0,
   endYOffset = 0,
 }) => {
-  const id = useId()
-  const [pathD, setPathD] = useState("")
-  const [svgDimensions, setSvgDimensions] = useState({ width: 0, height: 0 })
+  const id = useId();
+  const [pathD, setPathD] = useState("");
+  const [svgDimensions, setSvgDimensions] = useState({ width: 0, height: 0 });
 
   // Calculate the gradient coordinates based on the reverse prop
   const gradientCoordinates = reverse
@@ -39,63 +40,74 @@ export const AnimatedBeam = ({
         x2: ["0%", "100%"],
         y1: ["0%", "0%"],
         y2: ["0%", "0%"],
-      }
+      };
 
   useEffect(() => {
     const updatePath = () => {
       if (containerRef.current && fromRef.current && toRef.current) {
-        const containerRect = containerRef.current.getBoundingClientRect()
-        const rectA = fromRef.current.getBoundingClientRect()
-        const rectB = toRef.current.getBoundingClientRect()
+        const containerRect = containerRef.current.getBoundingClientRect();
+        const rectA = fromRef.current.getBoundingClientRect();
+        const rectB = toRef.current.getBoundingClientRect();
 
-        const svgWidth = containerRect.width
-        const svgHeight = containerRect.height
-        setSvgDimensions({ width: svgWidth, height: svgHeight })
+        const svgWidth = containerRect.width;
+        const svgHeight = containerRect.height;
+        setSvgDimensions({ width: svgWidth, height: svgHeight });
 
         const startX =
-          rectA.left - containerRect.left + rectA.width / 2 + startXOffset
+          rectA.left - containerRect.left + rectA.width / 2 + startXOffset;
         const startY =
-          rectA.top - containerRect.top + rectA.height / 2 + startYOffset
+          rectA.top - containerRect.top + rectA.height / 2 + startYOffset;
         const endX =
-          rectB.left - containerRect.left + rectB.width / 2 + endXOffset
+          rectB.left - containerRect.left + rectB.width / 2 + endXOffset;
         const endY =
-          rectB.top - containerRect.top + rectB.height / 2 + endYOffset
+          rectB.top - containerRect.top + rectB.height / 2 + endYOffset;
 
-        const controlY = startY - curvature
-        const d = `M ${startX},${startY} Q ${
-          (startX + endX) / 2
-        },${controlY} ${endX},${endY}`
-        setPathD(d)
+        // titik belok dibikin bertingkat (nested) pake nilai curvature:
+        // makin jauh icon dari center (curvature makin gede), makin jauh
+        // juga titik beloknya dari center -> jalur tiap garis unik,
+        // bentuknya jadi kayak piramida/staircase, nggak numpuk lagi.
+        // Kalau bendGap dikasih manual (prop), itu yang dipake -> buat
+        // "mundurin" garis depan icon tertentu tanpa ganggu yang lain.
+        const dir = endX >= startX ? 1 : -1;
+        const baseGap = 40;
+        const fanStep = 0.45;
+        const autoBendGap = baseGap + Math.abs(curvature) * fanStep;
+        const finalBendGap = bendGap ?? autoBendGap;
+        const bendX = endX - dir * finalBendGap;
+
+        const d = `M ${startX},${startY} L ${bendX},${startY} L ${bendX},${endY} L ${endX},${endY}`;
+        setPathD(d);
       }
-    }
+    };
 
     // Initialize ResizeObserver
     const resizeObserver = new ResizeObserver(() => {
-      updatePath()
-    })
+      updatePath();
+    });
 
     // Observe the container element
     if (containerRef.current) {
-      resizeObserver.observe(containerRef.current)
+      resizeObserver.observe(containerRef.current);
     }
 
     // Call the updatePath initially to set the initial path
-    updatePath()
+    updatePath();
 
     // Clean up the observer on component unmount
     return () => {
-      resizeObserver.disconnect()
+      resizeObserver.disconnect();
     };
   }, [
     containerRef,
     fromRef,
     toRef,
     curvature,
+    bendGap,
     startXOffset,
     startYOffset,
     endXOffset,
     endYOffset,
-  ])
+  ]);
 
   return (
     <svg
@@ -105,21 +117,26 @@ export const AnimatedBeam = ({
       xmlns="http://www.w3.org/2000/svg"
       className={cn(
         "pointer-events-none absolute top-0 left-0 transform-gpu stroke-2",
-        className
+        className,
       )}
-      viewBox={`0 0 ${svgDimensions.width} ${svgDimensions.height}`}>
+      viewBox={`0 0 ${svgDimensions.width} ${svgDimensions.height}`}
+    >
       <path
         d={pathD}
         stroke={pathColor}
         strokeWidth={pathWidth}
         strokeOpacity={pathOpacity}
-        strokeLinecap="round" />
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
       <path
         d={pathD}
         strokeWidth={pathWidth}
         stroke={`url(#${id})`}
         strokeOpacity="1"
-        strokeLinecap="round" />
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
       <defs>
         <motion.linearGradient
           className="transform-gpu"
@@ -142,14 +159,20 @@ export const AnimatedBeam = ({
             duration,
             ease: [0.16, 1, 0.3, 1], // https://easings.net/#easeOutExpo
             repeat: Infinity,
+            repeatType: "reverse",
             repeatDelay: 0,
-          }}>
+          }}
+        >
           <stop stopColor={gradientStartColor} stopOpacity="0"></stop>
           <stop stopColor={gradientStartColor}></stop>
           <stop offset="32.5%" stopColor={gradientStopColor}></stop>
-          <stop offset="100%" stopColor={gradientStopColor} stopOpacity="0"></stop>
+          <stop
+            offset="100%"
+            stopColor={gradientStopColor}
+            stopOpacity="0"
+          ></stop>
         </motion.linearGradient>
       </defs>
     </svg>
   );
-}
+};

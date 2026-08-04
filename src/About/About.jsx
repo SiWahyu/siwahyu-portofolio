@@ -1,27 +1,33 @@
 import AboutCard from "./components/AboutCard";
-import AboutTerminal from "./components/AboutTerminal";
+import AboutImage from "./components/AboutImage";
+import { motion } from "motion/react";
+import { fadeLeft, fadeRight, viewport } from "@/lib/motion";
 
 // eslint-disable-next-line react/prop-types
 export default function About({ aboutRef }) {
   return (
     <div
-      className="container min-h-screen flex flex-col space-y-6 lg:py-16 lg:flex-row lg:items-center justify-center gap-4 px-4 mx-auto"
+      className="container flex flex-col items-center min-h-screen gap-8 px-4 mx-auto sm:px-6 lg:flex-row justify-evenly"
       ref={aboutRef}
     >
-      <div
-        className="flex items-center justify-center w-full h-96 lg:w-1/2"
-        data-aos="fade-right"
-        data-aos-duration="1500"
+      <motion.div
+        className="flex justify-center w-full lg:w-1/2"
+        variants={fadeLeft}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewport}
       >
-        <AboutTerminal />
-      </div>
-      <div
-        className="flex flex-col items-center w-full lg:flex-row lg:w-1/2"
-        data-aos="fade-up"
-        data-aos-duration="1000"
+        <AboutImage />
+      </motion.div>
+      <motion.div
+        className="flex flex-col lg:w-1/2 "
+        variants={fadeRight}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewport}
       >
         <AboutCard />
-      </div>
+      </motion.div>
     </div>
   );
 }

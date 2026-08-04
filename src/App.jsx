@@ -3,19 +3,22 @@ import Hero from "./Home/Hero";
 import About from "./About/About";
 import Skill from "./Skill/Skill";
 import { useEffect, useRef, useState } from "react";
+import { MotionConfig } from "motion/react";
 import "@fontsource/chakra-petch/400.css";
 import Project from "./Project/Project";
 import Contact from "./Contact/Contact";
-import "aos/dist/aos.css";
+import Journey from "./Journey/Journey";
 import PlayMusic from "./components/PlayMusic";
 import { ThemeProvider } from "./components/theme-provider";
 import AppLayout from "./Layouts/AppLayout";
+import Footer from "./Footer/Footer";
 
 function App() {
   const aboutRef = useRef(null);
   const skillRef = useRef(null);
   const heroRef = useRef(null);
   const projectRef = useRef(null);
+  const journeyRef = useRef(null);
   const contactRef = useRef(null);
 
   const [activeSection, setActiveSection] = useState("Home");
@@ -26,6 +29,7 @@ function App() {
       { name: "About", ref: aboutRef },
       { name: "Skill", ref: skillRef },
       { name: "Project", ref: projectRef },
+      { name: "Journey", ref: journeyRef },
       { name: "Contact", ref: contactRef },
     ];
 
@@ -50,25 +54,30 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <PlayMusic />
-      <AppLayout>
-        <Navbar
-          aboutRef={aboutRef}
-          skillRef={skillRef}
-          heroRef={heroRef}
-          projectRef={projectRef}
-          contactRef={contactRef}
-          activeSection={activeSection}
-          setActiveSection={setActiveSection}
-        />
-        <Hero aboutRef={aboutRef} heroRef={heroRef} />
-        <About aboutRef={aboutRef} />
-        <Skill skillRef={skillRef} />
-        <Project projectRef={projectRef} />
-        <Contact contactRef={contactRef} />
-      </AppLayout>
-    </ThemeProvider>
+    <MotionConfig reducedMotion="user">
+      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+        <PlayMusic />
+        <AppLayout>
+          <Navbar
+            aboutRef={aboutRef}
+            skillRef={skillRef}
+            heroRef={heroRef}
+            projectRef={projectRef}
+            journeyRef={journeyRef}
+            contactRef={contactRef}
+            activeSection={activeSection}
+            setActiveSection={setActiveSection}
+          />
+          <Hero aboutRef={aboutRef} heroRef={heroRef} />
+          <About aboutRef={aboutRef} />
+          <Skill skillRef={skillRef} />
+          <Project projectRef={projectRef} />
+          <Journey journeyRef={journeyRef} />
+          <Contact contactRef={contactRef} />
+          <Footer />
+        </AppLayout>
+      </ThemeProvider>
+    </MotionConfig>
   );
 }
 

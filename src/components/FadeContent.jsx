@@ -1,4 +1,5 @@
-import { useRef, useEffect, useState } from "react";
+import { motion } from "motion/react";
+import { easeOut, viewport } from "@/lib/motion";
 
 const FadeContent = ({
   children,
@@ -10,41 +11,16 @@ const FadeContent = ({
   initialOpacity = 0,
   className = "",
 }) => {
-  const [inView, setInView] = useState(false);
-  const ref = useRef(null);
-
-  useEffect(() => {
-    if (!ref.current) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          observer.unobserve(ref.current);
-          setTimeout(() => {
-            setInView(true);
-          }, delay);
-        }
-      },
-      { threshold }
-    );
-
-    observer.observe(ref.current);
-
-    return () => observer.disconnect();
-  }, [threshold, delay]);
-
   return (
-    <div
-      ref={ref}
+    <motion.div
       className={className}
-      style={{
-        opacity: inView ? 1 : initialOpacity,
-        transition: `opacity ${duration}ms ${easing}, filter ${duration}ms ${easing}`,
-        filter: blur ? (inView ? "blur(0px)" : "blur(10px)") : "none",
-      }}
+      initial={{ opacity: initialOpacity, filter: blur ? "blur(10px)" : "none", scale: 0.96 }}
+      whileInView={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
+      viewport={{ ...viewport, amount: threshold, once: false }}
+      transition={{ duration: duration / 1000, delay: delay / 1000, ease: easing === "ease-out" ? easeOut : easing }}
     >
       {children}
-    </div>
+    </motion.div>
   );
 };
 

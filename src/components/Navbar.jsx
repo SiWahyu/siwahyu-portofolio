@@ -1,10 +1,12 @@
 import { useState } from "react";
+import { motion } from "motion/react";
 
 export default function Navbar({
   aboutRef,
   skillRef,
   heroRef,
   projectRef,
+  journeyRef,
   contactRef,
   activeSection,
   setActiveSection,
@@ -16,6 +18,7 @@ export default function Navbar({
     About: aboutRef,
     Skill: skillRef,
     Project: projectRef,
+    Journey: journeyRef,
     Contact: contactRef,
   };
 
@@ -24,21 +27,25 @@ export default function Navbar({
     const ref = sections[key];
     if (ref?.current) {
       setActiveSection(key);
-      ref.current.scrollIntoView({ behavior: "smooth" });
+      setIsOpen(false);
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
-  const menuItems = ["Home", "About", "Skill", "Project", "Contact"];
+  const menuItems = ["Home", "About", "Skill", "Project", "Journey", "Contact"];
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-transparent bg-opacity-80 backdrop-blur-sm transition-all duration-100 z-50">
+    <nav className="fixed top-0 left-0 z-50 w-full bg-transparent bg-opacity-80 backdrop-blur-sm transition-all duration-100">
       <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-6 py-3">
-        <span
+        <motion.span
           className="flex items-center space-x-3 rtl:space-x-reverse"
           onClick={handleClick}
+          initial={{ opacity: 0, y: -12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.45 }}
         >
           <Title title={"SiWahyu"} />
-        </span>
+        </motion.span>
         <ButtonMobile isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
         <div
           className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto`}
@@ -63,23 +70,28 @@ export default function Navbar({
 
 const Title = ({ title }) => {
   return (
-    <span className="self-center text-2xl font-semibold whitespace-nowrap text-white font-mono">
+    <motion.span
+      className="self-center text-2xl font-semibold whitespace-nowrap text-white font-mono"
+      whileHover={{ letterSpacing: "0.04em" }}
+    >
       {title}
-    </span>
+    </motion.span>
   );
 };
 
 const ButtonMenu = ({ active, name, onClick }) => {
   return (
-    <button
+    <motion.button
       className={`block py-2 px-3  rounded-sm md:hover:bg-transparent  md:p-0 ${
         active === name ? "text-white font-medium" : "text-neutral-400"
       }`}
       onClick={onClick}
       name={name}
+      whileHover={{ y: -2 }}
+      whileTap={{ scale: 0.95 }}
     >
       {name}
-    </button>
+    </motion.button>
   );
 };
 

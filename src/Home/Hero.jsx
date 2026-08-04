@@ -1,16 +1,13 @@
 import FadeContent from "@/components/FadeContent";
 import AnimatedContent from "@/components/AnimatedContent";
 import HeroTitle from "./components/HeroTitle";
-import HeroButton from "./components/HeroButton";
+import ButtonStart from "./components/ButtonStart";
 import HeroImage from "./components/HeroImage";
 
 export default function Hero({ aboutRef, heroRef }) {
-  const handleStartButton = () => {
-    aboutRef.current.scrollIntoView({ behavior: "smooth" });
-  };
   return (
     <div
-      className="container min-h-screen px-6 md:py-32 mx-auto lg:mt-10 bg-transparent lg:px-16 flex flex-col items-center justify-center"
+      className="container min-h-screen scroll-mt-24 px-6 md:py-32 mx-auto lg:mt-10 bg-transparent lg:px-16 flex flex-col items-center justify-center"
       ref={heroRef}
     >
       <div className="flex flex-col-reverse lg:flex-row items-center w-full mt-10 md:mt-0">
@@ -42,7 +39,9 @@ export default function Hero({ aboutRef, heroRef }) {
               threshold={0.1}
               delay={0}
             >
-              <HeroButton aboutRef={aboutRef} />
+              <div className="flex justify-center lg:justify-start">
+                <ButtonStart aboutRef={aboutRef} />
+              </div>
             </AnimatedContent>
           </div>
         </div>

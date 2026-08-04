@@ -175,3 +175,30 @@ body::-webkit-scrollbar,
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  .glass-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    border: 1px solid rgb(255 255 255 / 0.1);
+    background: #1818187a;
+    box-shadow:
+      0 18px 40px rgb(0 0 0 / 0.2),
+      inset 0 1px 0 rgb(255 255 255 / 0.035);
+    backdrop-filter: blur(10px);
+    transition:
+      transform 300ms ease,
+      border-color 300ms ease,
+      background-color 300ms ease,
+      box-shadow 300ms ease;
+  }
+
+  .glass-card:hover {
+    border-color: rgb(255 255 255 / 0.16);
+    background: rgb(30 30 30 / 0.52);
+    box-shadow:
+      0 22px 46px rgb(0 0 0 / 0.24),
+      inset 0 1px 0 rgb(255 255 255 / 0.04);
+  }
+}
