@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { motion } from "motion/react";
+import { useTranslation } from "react-i18next";
+import LanguageToggle from "./LanguageToggle";
 
 export default function Navbar({
   aboutRef,
-  skillRef,
+  techRef,
   heroRef,
   projectRef,
   journeyRef,
@@ -12,11 +14,12 @@ export default function Navbar({
   setActiveSection,
 }) {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
 
   const sections = {
     Home: heroRef,
     About: aboutRef,
-    Skill: skillRef,
+    Tech: techRef,
     Project: projectRef,
     Journey: journeyRef,
     Contact: contactRef,
@@ -32,7 +35,7 @@ export default function Navbar({
     }
   };
 
-  const menuItems = ["Home", "About", "Skill", "Project", "Journey", "Contact"];
+  const menuItems = ["Home", "About", "Tech", "Project", "Journey", "Contact"];
 
   return (
     <nav className="fixed top-0 left-0 z-50 w-full bg-transparent bg-opacity-80 backdrop-blur-sm transition-all duration-100">
@@ -44,9 +47,12 @@ export default function Navbar({
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45 }}
         >
-          <Title title={"SiWahyu"} />
+          <Title title={t("nav.title")} />
         </motion.span>
-        <ButtonMobile isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
+        <div className="flex items-center gap-2">
+          <LanguageToggle />
+          <ButtonMobile isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
+        </div>
         <div
           className={`${isOpen ? "block" : "hidden"} w-full md:block md:w-auto`}
           id="navbar-dropdown"
@@ -56,6 +62,7 @@ export default function Navbar({
               <li key={index}>
                 <ButtonMenu
                   name={item}
+                  label={t(`nav.menu.${item.toLowerCase()}`)}
                   active={activeSection}
                   onClick={handleClick}
                 />
@@ -79,7 +86,7 @@ const Title = ({ title }) => {
   );
 };
 
-const ButtonMenu = ({ active, name, onClick }) => {
+const ButtonMenu = ({ active, name, label, onClick }) => {
   return (
     <motion.button
       className={`block py-2 px-3  rounded-sm md:hover:bg-transparent  md:p-0 ${
@@ -90,12 +97,13 @@ const ButtonMenu = ({ active, name, onClick }) => {
       whileHover={{ y: -2 }}
       whileTap={{ scale: 0.95 }}
     >
-      {name}
+      {label}
     </motion.button>
   );
 };
 
 const ButtonMobile = ({ isOpen, onClick }) => {
+  const { t } = useTranslation();
   return (
     <button
       onClick={onClick}
@@ -103,7 +111,7 @@ const ButtonMobile = ({ isOpen, onClick }) => {
       className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:text-slate-300 focus:outline-none focus:ring-2 focus:ring-gray-200 "
       aria-expanded={isOpen}
     >
-      <span className="sr-only">Open main menu</span>
+      <span className="sr-only">{t("nav.openMenu")}</span>
       <svg
         className="w-5 h-5"
         aria-hidden="true"
@@ -116,7 +124,7 @@ const ButtonMobile = ({ isOpen, onClick }) => {
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={2}
-          d="M1 1h15M1 7h15M1 13h15"
+          d="M 1 1h15M1 7h15M1 13h15"
         />
       </svg>
     </button>

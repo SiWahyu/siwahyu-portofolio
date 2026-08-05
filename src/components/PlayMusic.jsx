@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import amongus from "../assets/among-us.mp3";
+import bgMusic from "../assets/bg-music.mp3";
 
 export default function PlayMusic() {
   const audioRef = useRef(null);
@@ -7,23 +7,27 @@ export default function PlayMusic() {
   useEffect(() => {
     const audio = audioRef.current;
     audio.volume = 0.2;
-    const playAudio = async () => {
-      try {
-        await audioRef.current.play();
-        console.log("Musik diputar ");
-      } catch (err) {
-        console.warn("Autoplay diblokir browser : ", err);
-        document.addEventListener(
-          "click",
-          () => {
-            audioRef.current.play();
-          },
-          { once: true }
-        );
-      }
+
+    const playAudio = () => {
+      audio.play().catch(() => {});
     };
+
     playAudio();
+
+    const startOnInteraction = () => {
+      playAudio();
+      document.removeEventListener("pointerdown", startOnInteraction);
+      document.removeEventListener("keydown", startOnInteraction);
+    };
+
+    document.addEventListener("pointerdown", startOnInteraction);
+    document.addEventListener("keydown", startOnInteraction);
+
+    return () => {
+      document.removeEventListener("pointerdown", startOnInteraction);
+      document.removeEventListener("keydown", startOnInteraction);
+    };
   }, []);
 
-  return <audio ref={audioRef} src={amongus} autoPlay loop />;
+  return <audio ref={audioRef} src={bgMusic} autoPlay loop />;
 }

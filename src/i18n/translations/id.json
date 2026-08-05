@@ -1,0 +1,287 @@
+{
+  "nav": {
+    "title": "SiWahyu",
+    "menu": {
+      "home": "Home",
+      "about": "About",
+      "tech": "Tech",
+      "project": "Project",
+      "journey": "Journey",
+      "contact": "Contact"
+    },
+    "openMenu": "Buka menu utama"
+  },
+  "hero": {
+    "greeting": "Hey There",
+    "iam": "I am",
+    "roles": [
+      "Backend Developer",
+      "Web Developer"
+    ],
+    "textType": [
+      "Selamat datang di React Bits! Senang kamu datang!",
+      "Bangun pengalaman yang menakutkan!"
+    ],
+    "cta": "Tentang Saya"
+  },
+  "about": {
+    "label": "Who am I",
+    "title": "Tentang Saya",
+    "desc": "Halo, saya Wahyu seorang lulusan SMK jurusan Rekayasa Perangkat Lunak. Saya memiliki minat dalam bidang IT khusus nya di bidang Backend Developer & Web Developer."
+  },
+  "tech": {
+    "title": "Tech Stack"
+  },
+  "project": {
+    "label": "What I've built",
+    "title": "Project Saya",
+    "desc": "Setiap project adalah wadah untuk mengubah ide menjadi solusi nyata dan mengasah kemampuan di setiap baris kode.",
+    "badge": {
+      "buildType": "Build type",
+      "stage": "Stage",
+      "completed": "Selesai",
+      "inProgress": "Dalam pengembangan",
+      "sourceCode": "Explore source code"
+    },
+    "items": [
+      {
+        "name": "Presensi Siswa",
+        "images": [
+          "presensi/presensi-image-1.jpg",
+          "presensi/presensi-image-2.jpg",
+          "presensi/presensi-image-3.jpg",
+          "presensi/presensi-image-4.jpg",
+          "presensi/presensi-image-5.jpg",
+          "presensi/presensi-image-6.jpg",
+          "presensi/presensi-image-7.jpg",
+          "presensi/presensi-image-8.jpg",
+          "presensi/presensi-image-9.jpg",
+          "presensi/presensi-image-10.jpg",
+          "presensi/presensi-image-11.jpg",
+          "presensi/presensi-image-12.jpg",
+          "presensi/presensi-image-13.jpg",
+          "presensi/presensi-image-14.jpg"
+        ],
+        "deskrip": "Aplikasi untuk mempermudah guru dalam melakukan pencatatan dan perekapan kehadiran siswa dalam bentuk excel.",
+        "category": "Web Application",
+        "tech": [
+          "PHP",
+          "Laravel",
+          "MySQL",
+          "Bootstrap",
+          "jQuery"
+        ],
+        "status": "completed",
+        "link": "https://github.com/SiWahyu"
+      },
+      {
+        "name": "POS System",
+        "images": [
+          "pos/pos-image-1.jpg",
+          "pos/pos-image-2.jpg",
+          "pos/pos-image-3.jpg",
+          "pos/pos-image-4.jpg",
+          "pos/pos-image-5.jpg",
+          "pos/pos-image-6.jpg",
+          "pos/pos-image-7.jpg",
+          "pos/pos-image-8.jpg",
+          "pos/pos-image-9.jpg",
+          "pos/pos-image-10.jpg",
+          "pos/pos-image-11.jpg",
+          "pos/pos-image-12.jpg",
+          "pos/pos-image-13.jpg",
+          "pos/pos-image-14.jpg",
+          "pos/pos-image-15.jpg",
+          "pos/pos-image-16.jpg",
+          "pos/pos-image-17.jpg",
+          "pos/pos-image-18.jpg",
+          "pos/pos-image-19.jpg"
+        ],
+        "deskrip": "Aplikasi POS untuk mencatat data stok barang, data penjualan barang, data restok barang dari supplier dan data member customer.",
+        "category": "POS System",
+        "tech": [
+          "PHP",
+          "Laravel",
+          "MySQL",
+          "Bootstrap",
+          "jQuery",
+          "Midtrans"
+        ],
+        "status": "completed",
+        "link": "https://github.com/SiWahyu"
+      },
+      {
+        "name": "Toko Sepatu Online",
+        "images": [
+          "toko-sepatu/toko-sepatu-image-1.jpg"
+        ],
+        "deskrip": "aplikasi toko sepatu online yang memungkinkan pelanggan untuk mencari, memilih, dan memesan sepatu favorit mereka dengan mudah. Dengan tampilan yang modern dan responsif, aplikasi ini memberikan pengalaman berbelanja yang nyaman dan cepat.",
+        "category": "E-Commerce",
+        "tech": [
+          "PHP",
+          "Laravel",
+          "MySQL",
+          "Bootstrap",
+          "Midtrans"
+        ],
+        "status": "completed",
+        "link": "https://github.com/SiWahyu"
+      },
+      {
+        "name": "Clone Tokopedia",
+        "images": [
+          "clone-tokopedia/clone-tokopedia-image-1.jpg"
+        ],
+        "deskrip": "Clone Aplikasi Tokopedia yang menggunakan React dan Tailwind.",
+        "category": "Frontend",
+        "tech": [
+          "React",
+          "Tailwind",
+          "shadcn"
+        ],
+        "status": "progress",
+        "link": "https://github.com/SiWahyu"
+      },
+      {
+        "name": "Clone Instagram",
+        "images": [
+          "clone-instagram/clone-instagram-image-1.jpg"
+        ],
+        "deskrip": "Clone Instagram Versi Mobile menggunakan React dan Tailwind Sebagai FE, Laravel Sebagai BE dan PostgreSQL Sebagai Database dengan komponen UI dari shadcn.",
+        "category": "Fullstack",
+        "tech": [
+          "React",
+          "Tailwind",
+          "shadcn",
+          "Laravel",
+          "PostgreSQL"
+        ],
+        "status": "progress",
+        "link": "https://github.com/SiWahyu"
+      }
+    ]
+  },
+  "journey": {
+    "label": "My journey",
+    "title": "Perjalanan Saya",
+    "desc": "Setiap langkah adalah proses untuk terus berkembang dan membangun karya yang bermanfaat.",
+    "items": [
+      {
+        "icon": "sparkles",
+        "period": "Setelah lulus SMP · 2020",
+        "title": "Awal Mula Belajar Coding",
+        "organization": "Belajar otodidak",
+        "points": [
+          "Mulai mengenal dunia coding secara otodidak setelah lulus SMP.",
+          "Penasaran cara kerja website, mulai belajar HTML dan CSS sendiri.",
+          "Menjadikan ketertarikan ini sebagai alasan masuk jurusan RPL."
+        ],
+        "tech": [
+          "HTML",
+          "CSS"
+        ]
+      },
+      {
+        "icon": "graduationcap",
+        "period": "SMK Citra Negara · 2021 – 2024",
+        "title": "Lulusan Rekayasa Perangkat Lunak",
+        "organization": "SMK Citra Negara",
+        "points": [
+          "Mendalami pemrograman web, database, dan logika algoritma.",
+          "Belajar PHP, MySQL, HTML, CSS, dan JavaScript di bangku sekolah.",
+          "Lulus dengan mengerjakan aplikasi presensi siswa sebagai Uji Kompetensi."
+        ],
+        "tech": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "PHP",
+          "MySQL"
+        ]
+      },
+      {
+        "icon": "layers",
+        "period": "Ujian Kompetensi · 2024",
+        "title": "Membangun Aplikasi Presensi Siswa",
+        "organization": "Project UKK untuk kelulusan",
+        "points": [
+          "Membangun aplikasi presensi siswa berbasis Laravel untuk ujian kompetensi.",
+          "Guru login lalu scan QR code di tiap kelas dan langsung masuk ke halaman presensi kelas tersebut.",
+          "Menyediakan fitur export data kehadiran untuk rekap guru dan sekolah.",
+          "Menyelesaikan project dari nol sampai bisa dipakai."
+        ],
+        "tech": [
+          "Laravel",
+          "PHP",
+          "MySQL",
+          "Bootstrap"
+        ]
+      },
+      {
+        "icon": "rocket",
+        "period": "Setelah lulus SMK · Belajar",
+        "title": "Mengasah Skill sebagai Web Developer",
+        "organization": "Lanjut belajar & coding",
+        "points": [
+          "Mendalami pengembangan web modern dengan React dan Next.js.",
+          "Membiasakan menyelesaikan masalah dan debugging secara mandiri.",
+          "Tertarik mempelajari bahasa pemrograman baru seperti Go.",
+          "Terus membangun project untuk memperkuat portfolio."
+        ],
+        "tech": [
+          "React",
+          "Next.js",
+          "Tailwind",
+          "Golang"
+        ]
+      },
+      {
+        "icon": "briefcase",
+        "period": "Open untuk peluang",
+        "title": "Mencari Pengalaman Pertama di Dunia Kerja",
+        "organization": "Magang / Junior / Fresh graduate",
+        "points": [
+          "Terbuka untuk kesempatan magang, junior, atau kolaborasi project.",
+          "Siap belajar, menerima masukan, dan berkembang dalam tim.",
+          "Terbiasa kerja tim dari pengerjaan project dan tugas sekolah.",
+          "Ingin menerapkan ilmu yang dipelajari di project nyata."
+        ],
+        "tech": [
+          "Laravel",
+          "React",
+          "Golang"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "label": "Get in touch",
+    "title": "Hubungi Saya",
+    "desc": "Masih terus belajar, tapi serius dalam setiap baris kode yang saya tulis. Terbuka untuk peluang sebagai fullstack developer, kolaborasi proyek, maupun kesempatan magang di tim yang suportif.",
+    "location": "Based in Indonesia • Available Globally",
+    "email": "fwahyu839@gmail.com",
+    "social": {
+      "github": "Github",
+      "linkedin": "Linkedin",
+      "instagram": "Instagram"
+    },
+    "socialLinks": {
+      "github": "https://github.com/SiWahyu",
+      "linkedin": "https://www.linkedin.com/in/wahyu-firman-b0b998407/",
+      "instagram": "https://www.instagram.com/si_yuu.4/"
+    }
+  },
+  "footer": {
+    "name": "Wahyu Firman",
+    "copyright": "Copyright",
+    "social": {
+      "github": "Github",
+      "linkedin": "Linkedin",
+      "email": "Email"
+    }
+  },
+  "copyButton": {
+    "copy": "Copy",
+    "copied": "Copied"
+  }
+}

@@ -1,7 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap");
 @import "tailwindcss";
 
-/* Definisikan font custom */
 @theme {
   --font-space: "Chakra Petch", sans-serif;
 }
@@ -188,7 +186,6 @@ body::-webkit-scrollbar,
       inset 0 1px 0 rgb(255 255 255 / 0.035);
     backdrop-filter: blur(10px);
     transition:
-      transform 300ms ease,
       border-color 300ms ease,
       background-color 300ms ease,
       box-shadow 300ms ease;

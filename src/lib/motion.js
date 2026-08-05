@@ -43,3 +43,14 @@ export const staggerContainer = (staggerChildren = 0.12, delayChildren = 0) => (
     transition: { staggerChildren, delayChildren },
   },
 });
+
+export const cardReveal = {
+  hidden: { opacity: 0, y: 48, scale: 0.94, filter: "blur(6px)" },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    filter: "blur(0px)",
+    transition: { type: "spring", stiffness: 65, damping: 16, mass: 0.9 },
+  },
+};

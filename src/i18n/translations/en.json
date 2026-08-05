@@ -1,0 +1,287 @@
+{
+  "nav": {
+    "title": "SiWahyu",
+    "menu": {
+      "home": "Home",
+      "about": "About",
+      "tech": "Tech",
+      "project": "Project",
+      "journey": "Journey",
+      "contact": "Contact"
+    },
+    "openMenu": "Open main menu"
+  },
+  "hero": {
+    "greeting": "Hey There",
+    "iam": "I am",
+    "roles": [
+      "Backend Developer",
+      "Web Developer"
+    ],
+    "textType": [
+      "Welcome to React Bits! Good to see you!",
+      "Build some amazing experiences!"
+    ],
+    "cta": "About Me"
+  },
+  "about": {
+    "label": "Who am I",
+    "title": "About Me",
+    "desc": "Hi, I'm Wahyu, a graduate of vocational high school majoring in Software Engineering. I have a strong interest in IT, specifically in Backend Development & Web Development."
+  },
+  "tech": {
+    "title": "Tech Stack"
+  },
+  "project": {
+    "label": "What I've built",
+    "title": "My Projects",
+    "desc": "Every project is a space to turn ideas into real solutions and sharpen skills with each line of code.",
+    "badge": {
+      "buildType": "Build type",
+      "stage": "Stage",
+      "completed": "Completed",
+      "inProgress": "In development",
+      "sourceCode": "Explore source code"
+    },
+    "items": [
+      {
+        "name": "Student Attendance",
+        "images": [
+          "presensi/presensi-image-1.jpg",
+          "presensi/presensi-image-2.jpg",
+          "presensi/presensi-image-3.jpg",
+          "presensi/presensi-image-4.jpg",
+          "presensi/presensi-image-5.jpg",
+          "presensi/presensi-image-6.jpg",
+          "presensi/presensi-image-7.jpg",
+          "presensi/presensi-image-8.jpg",
+          "presensi/presensi-image-9.jpg",
+          "presensi/presensi-image-10.jpg",
+          "presensi/presensi-image-11.jpg",
+          "presensi/presensi-image-12.jpg",
+          "presensi/presensi-image-13.jpg",
+          "presensi/presensi-image-14.jpg"
+        ],
+        "deskrip": "An application to help teachers record and export student attendance in Excel format.",
+        "category": "Web Application",
+        "tech": [
+          "PHP",
+          "Laravel",
+          "MySQL",
+          "Bootstrap",
+          "jQuery"
+        ],
+        "status": "completed",
+        "link": "https://github.com/SiWahyu"
+      },
+      {
+        "name": "POS System",
+        "images": [
+          "pos/pos-image-1.jpg",
+          "pos/pos-image-2.jpg",
+          "pos/pos-image-3.jpg",
+          "pos/pos-image-4.jpg",
+          "pos/pos-image-5.jpg",
+          "pos/pos-image-6.jpg",
+          "pos/pos-image-7.jpg",
+          "pos/pos-image-8.jpg",
+          "pos/pos-image-9.jpg",
+          "pos/pos-image-10.jpg",
+          "pos/pos-image-11.jpg",
+          "pos/pos-image-12.jpg",
+          "pos/pos-image-13.jpg",
+          "pos/pos-image-14.jpg",
+          "pos/pos-image-15.jpg",
+          "pos/pos-image-16.jpg",
+          "pos/pos-image-17.jpg",
+          "pos/pos-image-18.jpg",
+          "pos/pos-image-19.jpg"
+        ],
+        "deskrip": "A POS application to record item stock, sales data, supplier restock data, and customer member data.",
+        "category": "POS System",
+        "tech": [
+          "PHP",
+          "Laravel",
+          "MySQL",
+          "Bootstrap",
+          "jQuery",
+          "Midtrans"
+        ],
+        "status": "completed",
+        "link": "https://github.com/SiWahyu"
+      },
+      {
+        "name": "Online Shoe Store",
+        "images": [
+          "toko-sepatu/toko-sepatu-image-1.jpg"
+        ],
+        "deskrip": "An online shoe store application that allows customers to easily search, select, and order their favorite shoes. With a modern and responsive design, it delivers a comfortable and fast shopping experience.",
+        "category": "E-Commerce",
+        "tech": [
+          "PHP",
+          "Laravel",
+          "MySQL",
+          "Bootstrap",
+          "Midtrans"
+        ],
+        "status": "completed",
+        "link": "https://github.com/SiWahyu"
+      },
+      {
+        "name": "Tokopedia Clone",
+        "images": [
+          "clone-tokopedia/clone-tokopedia-image-1.jpg"
+        ],
+        "deskrip": "A Tokopedia clone application built with React and Tailwind.",
+        "category": "Frontend",
+        "tech": [
+          "React",
+          "Tailwind",
+          "shadcn"
+        ],
+        "status": "progress",
+        "link": "https://github.com/SiWahyu"
+      },
+      {
+        "name": "Instagram Clone",
+        "images": [
+          "clone-instagram/clone-instagram-image-1.jpg"
+        ],
+        "deskrip": "A mobile version of Instagram clone using React and Tailwind as FE, Laravel as BE, and PostgreSQL as the database with shadcn UI components.",
+        "category": "Fullstack",
+        "tech": [
+          "React",
+          "Tailwind",
+          "shadcn",
+          "Laravel",
+          "PostgreSQL"
+        ],
+        "status": "progress",
+        "link": "https://github.com/SiWahyu"
+      }
+    ]
+  },
+  "journey": {
+    "label": "My journey",
+    "title": "My Journey",
+    "desc": "Every step is a process of continuous growth and building work that matters.",
+    "items": [
+      {
+        "icon": "sparkles",
+        "period": "After Junior High · 2020",
+        "title": "The Beginning of Learning to Code",
+        "organization": "Self-taught learning",
+        "points": [
+          "Started exploring coding self-taught after graduating junior high.",
+          "Got curious about how websites work and learned HTML and CSS on my own.",
+          "Turned this interest into the reason I chose the RPL major."
+        ],
+        "tech": [
+          "HTML",
+          "CSS"
+        ]
+      },
+      {
+        "icon": "graduationcap",
+        "period": "SMK Citra Negara · 2021 – 2024",
+        "title": "Graduate of Software Engineering",
+        "organization": "SMK Citra Negara",
+        "points": [
+          "Dived into web programming, databases, and algorithm logic.",
+          "Studied PHP, MySQL, HTML, CSS, and JavaScript at school.",
+          "Graduated by building a student attendance app as the competency exam."
+        ],
+        "tech": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "PHP",
+          "MySQL"
+        ]
+      },
+      {
+        "icon": "layers",
+        "period": "Competency Exam · 2024",
+        "title": "Building a Student Attendance App",
+        "organization": "Final project for graduation (UKK)",
+        "points": [
+          "Built a student attendance app with Laravel for the graduation competency exam.",
+          "Teachers log in, scan a QR code in each classroom, and are taken straight to that class's attendance page.",
+          "Provided an attendance data export feature for teachers and school records.",
+          "Completed the project from scratch to a working app."
+        ],
+        "tech": [
+          "Laravel",
+          "PHP",
+          "MySQL",
+          "Bootstrap"
+        ]
+      },
+      {
+        "icon": "rocket",
+        "period": "After Graduation · Learning",
+        "title": "Sharpening Skills as a Web Developer",
+        "organization": "Continuous learning & coding",
+        "points": [
+          "Diving deeper into modern web development with React and Next.js.",
+          "Getting used to solving problems and debugging independently.",
+          "Interested in learning new programming languages like Go.",
+          "Continuously building projects to strengthen my portfolio."
+        ],
+        "tech": [
+          "React",
+          "Next.js",
+          "Tailwind",
+          "Golang"
+        ]
+      },
+      {
+        "icon": "briefcase",
+        "period": "Open for opportunities",
+        "title": "Looking for My First Work Experience",
+        "organization": "Intern / Junior / Fresh graduate",
+        "points": [
+          "Open to internship, junior, or project collaboration opportunities.",
+          "Ready to learn, take feedback, and grow within a team.",
+          "Used to working in teams from school assignments and projects.",
+          "Eager to apply what I've learned to real-world projects."
+        ],
+        "tech": [
+          "Laravel",
+          "React",
+          "Golang"
+        ]
+      }
+    ]
+  },
+  "contact": {
+    "label": "Get in touch",
+    "title": "Contact Me",
+    "desc": "Still learning, but serious with every line of code I write. Open to opportunities as a fullstack developer, project collaborations, or internship slots in a supportive team.",
+    "location": "Based in Indonesia • Available Globally",
+    "email": "fwahyu839@gmail.com",
+    "social": {
+      "github": "Github",
+      "linkedin": "Linkedin",
+      "instagram": "Instagram"
+    },
+    "socialLinks": {
+      "github": "https://github.com/SiWahyu",
+      "linkedin": "https://www.linkedin.com",
+      "instagram": "https://www.instagram.com/si_yuu.4/"
+    }
+  },
+  "footer": {
+    "name": "Wahyu Firman",
+    "copyright": "Copyright",
+    "social": {
+      "github": "Github",
+      "linkedin": "Linkedin",
+      "email": "Email"
+    }
+  },
+  "copyButton": {
+    "copy": "Copy",
+    "copied": "Copied"
+  }
+}

@@ -1,21 +1,25 @@
 import Navbar from "./components/Navbar";
-import Hero from "./Home/Hero";
-import About from "./About/About";
-import Skill from "./Skill/Skill";
+import Hero from "./features/Home/Hero";
+import About from "./features/About/About";
+import Tech from "./features/Tech/Tech";
 import { useEffect, useRef, useState } from "react";
 import { MotionConfig } from "motion/react";
-import "@fontsource/chakra-petch/400.css";
-import Project from "./Project/Project";
-import Contact from "./Contact/Contact";
-import Journey from "./Journey/Journey";
+import "@fontsource/chakra-petch/latin-400.css";
+import "@fontsource/chakra-petch/latin-500.css";
+import "@fontsource/chakra-petch/latin-600.css";
+import "@fontsource/chakra-petch/latin-700.css";
+import Project from "./features/Project/Project";
+import Contact from "./features/Contact/Contact";
+import Journey from "./features/Journey/Journey";
 import PlayMusic from "./components/PlayMusic";
-import { ThemeProvider } from "./components/theme-provider";
-import AppLayout from "./Layouts/AppLayout";
-import Footer from "./Footer/Footer";
+import { ThemeProvider } from "./components/ThemeProvider";
+import AppLayout from "./layouts/AppLayout";
+import Footer from "./features/Footer/Footer";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const aboutRef = useRef(null);
-  const skillRef = useRef(null);
+  const techRef = useRef(null);
   const heroRef = useRef(null);
   const projectRef = useRef(null);
   const journeyRef = useRef(null);
@@ -27,7 +31,7 @@ function App() {
     const sections = [
       { name: "Home", ref: heroRef },
       { name: "About", ref: aboutRef },
-      { name: "Skill", ref: skillRef },
+      { name: "Tech", ref: techRef },
       { name: "Project", ref: projectRef },
       { name: "Journey", ref: journeyRef },
       { name: "Contact", ref: contactRef },
@@ -60,7 +64,7 @@ function App() {
         <AppLayout>
           <Navbar
             aboutRef={aboutRef}
-            skillRef={skillRef}
+techRef={techRef}
             heroRef={heroRef}
             projectRef={projectRef}
             journeyRef={journeyRef}
@@ -70,11 +74,12 @@ function App() {
           />
           <Hero aboutRef={aboutRef} heroRef={heroRef} />
           <About aboutRef={aboutRef} />
-          <Skill skillRef={skillRef} />
+          <Tech techRef={techRef} />
           <Project projectRef={projectRef} />
           <Journey journeyRef={journeyRef} />
           <Contact contactRef={contactRef} />
           <Footer />
+          <ScrollToTop />
         </AppLayout>
       </ThemeProvider>
     </MotionConfig>

@@ -1,14 +1,17 @@
 import Particles, { initParticlesEngine } from "@tsparticles/react";
-import { loadFull } from "tsparticles";
-import { useEffect, useMemo, useState } from "react";
+import { loadSlim } from "@tsparticles/slim";
+import { loadEmittersPlugin } from "@tsparticles/plugin-emitters";
+import { useEffect, useMemo, useState, memo } from "react";
 
-// eslint-disable-next-line react/prop-types
+const MemoizedParticles = memo(Particles);
+
 export default function AppLayout({ children }) {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
     initParticlesEngine(async (engine) => {
-      await loadFull(engine);
+      await loadSlim(engine);
+      await loadEmittersPlugin(engine);
     }).then(() => {
       setInit(true);
     });
@@ -162,42 +165,42 @@ export default function AppLayout({ children }) {
             options: {
               images: [
                 {
-                  src: "https://particles.js.org/images/amongus_blue.png",
+                  src: "/images/amongus/amongus_blue.png",
                   width: 205,
                   height: 267,
                 },
                 {
-                  src: "https://particles.js.org/images/amongus_cyan.png",
+                  src: "/images/amongus/amongus_cyan.png",
                   width: 207,
                   height: 265,
                 },
                 {
-                  src: "https://particles.js.org/images/amongus_green.png",
+                  src: "/images/amongus/amongus_green.png",
                   width: 204,
                   height: 266,
                 },
                 {
-                  src: "https://particles.js.org/images/amongus_lime.png",
+                  src: "/images/amongus/amongus_lime.png",
                   width: 206,
                   height: 267,
                 },
                 {
-                  src: "https://particles.js.org/images/amongus_orange.png",
+                  src: "/images/amongus/amongus_orange.png",
                   width: 205,
                   height: 265,
                 },
                 {
-                  src: "https://particles.js.org/images/amongus_pink.png",
+                  src: "/images/amongus/amongus_pink.png",
                   width: 205,
                   height: 265,
                 },
                 {
-                  src: "https://particles.js.org/images/amongus_red.png",
+                  src: "/images/amongus/amongus_red.png",
                   width: 204,
                   height: 267,
                 },
                 {
-                  src: "https://particles.js.org/images/amongus_white.png",
+                  src: "/images/amongus/amongus_white.png",
                   width: 205,
                   height: 267,
                 },
@@ -235,18 +238,18 @@ export default function AppLayout({ children }) {
         },
       },
     }),
-    []
+    [],
   );
 
   return (
-    <div className="relative w-full min-h-screen bg-black overflow-hidden scroll-smooth">
+    <div className="relative w-full min-h-screen overflow-hidden bg-black scroll-smooth">
       {!init && <div className="absolute inset-0 w-full h-full bg-black"></div>}
 
       {init && (
-        <Particles
+        <MemoizedParticles
           id="tsparticles"
           options={options}
-          className="absolute inset-0 w-full h-full z-0"
+          className="absolute inset-0 z-0 w-full h-full"
         />
       )}
 
