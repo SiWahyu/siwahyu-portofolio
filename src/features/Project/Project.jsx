@@ -43,7 +43,7 @@ export default function Project({ projectRef }) {
           </motion.p>
 
           <motion.h2
-            className="text-5xl px-4 md:px-0 font-bold text-white md:text-5xl font-space [text-shadow:0_0_10px_rgba(34,211,238,0.9),0_0_25px_rgba(34,211,238,0.6),0_0_50px_rgba(103,232,249,0.4)]"
+            className="text-5xl px-4 md:px-0 font-bold text-white md:text-5xl font-space"
             variants={fadeUp}
             initial="hidden"
             whileInView="visible"
@@ -53,7 +53,7 @@ export default function Project({ projectRef }) {
           </motion.h2>
 
           <motion.p
-            className="max-w-xl px-4 md:px-0 mx-auto mt-4 leading-6 text-neutral-300 text-base tracking-wide [text-shadow:0_0_10px_rgba(34,211,238,0.85),0_0_22px_rgba(59,130,246,0.55),0_0_38px_rgba(139,92,246,0.4),0_0_60px_rgba(217,70,239,0.25)]"
+            className="max-w-xl px-4 md:px-0 mx-auto mt-4 leading-6 text-neutral-300 text-base tracking-wide"
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={viewport}

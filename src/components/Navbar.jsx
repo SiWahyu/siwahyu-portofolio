@@ -38,7 +38,7 @@ export default function Navbar({
   const menuItems = ["Home", "About", "Tech", "Project", "Journey", "Contact"];
 
   return (
-    <nav className="fixed top-0 left-0 z-50 w-full bg-transparent bg-opacity-80 backdrop-blur-sm transition-all duration-100">
+    <nav className="fixed top-0 left-0 z-50 w-full bg-black/80 md:bg-transparent md:bg-opacity-80 md:backdrop-blur-sm transition-all duration-100">
       <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-6 py-3">
         <motion.span
           className="flex items-center space-x-3 rtl:space-x-reverse"

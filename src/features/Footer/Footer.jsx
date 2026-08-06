@@ -1,14 +1,14 @@
-import { Rocket } from "lucide-react";
+import { Code } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 const Footer = () => {
   const { t } = useTranslation();
   return (
-    <footer className="flex flex-row w-full justify-evenly glass-card min-h-[10vh] items-center border-none py-9">
+    <footer className="flex flex-row w-full justify-evenly glass-card min-h-[10vh] items-center border-none py-8">
       <div className="flex flex-row items-center gap-3">
-        <div className="rounded-full bg-gradient-to-br from-cyan-400 via-blue-500 to-slate-500 p-[1px] h-fit w-fit">
+        <div className="rounded-full border-2 border-cyan-300/50 p-[1px] h-fit w-fit">
           <div className="p-2 rounded-full bg-slate-950">
-            <Rocket className="size-5 text-cyan-300" />
+            <Code className="size-4 border-cyan-300/50" />
           </div>
         </div>
 

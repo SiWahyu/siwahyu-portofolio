@@ -16,7 +16,7 @@ const FadeContent = ({
       className={className}
       initial={{ opacity: initialOpacity, filter: blur ? "blur(10px)" : "none", scale: 0.96 }}
       whileInView={{ opacity: 1, filter: "blur(0px)", scale: 1 }}
-      viewport={{ ...viewport, amount: threshold, once: false }}
+      viewport={{ ...viewport, amount: threshold, once: true }}
       transition={{ duration: duration / 1000, delay: delay / 1000, ease: easing === "ease-out" ? easeOut : easing }}
     >
       {children}

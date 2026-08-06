@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 const HeroImage = () => {
   return (
     <motion.img
-      className="h-full w-72 lg:w-80"
+      className="w-64 h-full lg:w-80"
       src={siwahyuImage}
       draggable="false"
       alt="SiWahyu"

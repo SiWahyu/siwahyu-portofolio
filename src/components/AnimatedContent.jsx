@@ -26,7 +26,7 @@ const AnimatedContent = ({
         opacity: animateOpacity ? initialOpacity : 1,
       }}
       whileInView={{ [axis]: 0, scale: 1, opacity: 1 }}
-      viewport={{ ...viewport, amount: threshold, once: false }}
+      viewport={{ ...viewport, amount: threshold, once: true }}
       transition={{
         duration,
         delay,

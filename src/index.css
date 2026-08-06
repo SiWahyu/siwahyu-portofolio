@@ -199,3 +199,13 @@ body::-webkit-scrollbar,
       inset 0 1px 0 rgb(255 255 255 / 0.04);
   }
 }
+
+/* backdrop-filter sangat mahal di HP: nonaktifkan sepenuhnya di layar kecil */
+@media (max-width: 767px) {
+  *,
+  *::before,
+  *::after {
+    -webkit-backdrop-filter: none !important;
+    backdrop-filter: none !important;
+  }
+}

@@ -37,24 +37,25 @@ function App() {
       { name: "Contact", ref: contactRef },
     ];
 
-    const handleScroll = () => {
-      const middleScreen = window.innerHeight / 2;
-
-      for (let section of sections) {
-        const top = section.ref.current.getBoundingClientRect().top;
-        const height = section.ref.current.offsetHeight;
-
-        if (top <= middleScreen && top + height >= middleScreen) {
-          setActiveSection(section.name);
-          break;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            const section = sections.find(
+              (s) => s.ref.current === entry.target,
+            );
+            if (section) setActiveSection(section.name);
+          }
         }
-      }
-    };
+      },
+      { rootMargin: "-50% 0px -50% 0px", threshold: 0 },
+    );
 
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
+    sections.forEach((section) => {
+      if (section.ref.current) observer.observe(section.ref.current);
+    });
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => observer.disconnect();
   }, []);
 
   return (

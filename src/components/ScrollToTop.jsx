@@ -26,7 +26,7 @@ const ScrollToTop = () => {
         <div className="grid size-11 place-items-center rounded-full bg-gradient-to-br from-cyan-500 via-blue-600 to-fuchsia-600 shadow-[0_0_18px_rgba(34,211,238,0.5)] transition-shadow duration-300 group-hover:shadow-[0_0_26px_rgba(217,70,239,0.6)]">
           <Rocket
             strokeWidth={3}
-            className="text-white transition-transform duration-300 -rotate-45 size-5 group-hover:-translate-y-1 group-hover:scale-110"
+            className="transition-transform duration-300 -rotate-45 text-white/90 size-5 group-hover:-translate-y-1 group-hover:scale-110"
           />
         </div>
       </div>

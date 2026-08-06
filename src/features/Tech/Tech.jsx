@@ -4,7 +4,7 @@ import { AnimatedBeam } from "@/components/ui/animated-beam";
 import { ShineBorder } from "@/components/ui/shine-border";
 import Icons from "./components/Icons";
 import Circle from "./components/Circle";
-import { motion } from "motion/react";
+import { motion, useInView } from "motion/react";
 import { fadeUp, viewport } from "@/lib/motion";
 
 const beamConfig = [
@@ -24,6 +24,7 @@ export default function Tech({ techRef }) {
   const centerRef = useRef(null);
   const leftRefs = useRef(leftTech.map(() => ({ current: null })));
   const rightRefs = useRef(rightTech.map(() => ({ current: null })));
+  const beamsActive = useInView(containerRef, { amount: 0.05 });
 
   return (
     <div className="flex items-center h-screen scroll-mt-24" ref={techRef}>
@@ -96,6 +97,7 @@ export default function Tech({ techRef }) {
             toRef={centerRef}
             curvature={beamConfig[i].curvature}
             endYOffset={beamConfig[i].endYOffset}
+            active={beamsActive}
           />
         ))}
 
@@ -108,6 +110,7 @@ export default function Tech({ techRef }) {
             toRef={centerRef}
             curvature={beamConfig[i].curvature}
             endYOffset={beamConfig[i].endYOffset}
+            active={beamsActive}
           />
         ))}
       </motion.div>

@@ -4,8 +4,8 @@ import { useTranslation } from "react-i18next";
 const HeroTitle = () => {
   const { t } = useTranslation();
   return (
-    <div className="flex flex-col space-y-6 font-space">
-      <h1 className="flex flex-row items-center justify-center lg:justify-start gap-2 text-white text-3xl md:text-4xl font-bold [text-shadow:0_0_8px_rgba(34,211,238,0.4),0_0_20px_rgba(34,211,238,0.2)]">
+    <div className="flex flex-col space-y-3 font-space">
+      <h1 className="flex flex-row items-center justify-center gap-2 text-3xl font-bold text-white lg:justify-start md:text-4xl">
         {t("hero.greeting")}
         <img
           src="/images/hello.gif"
@@ -15,7 +15,7 @@ const HeroTitle = () => {
         />
         {t("hero.iam")}
       </h1>
-      <div className="flex flex-col space-y-2 [text-shadow:0_0_8px_rgba(34,211,238,0.4),0_0_20px_rgba(34,211,238,0.2)] text-4xl md:text-5xl">
+      <div className="flex flex-col space-y-2 text-4xl md:text-5xl">
         <h2 className="font-bold tracking-wider text-white">SiWahyu</h2>
         <h2 className="font-bold text-white h-[60px]  w-full">
           <TextType

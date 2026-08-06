@@ -16,7 +16,7 @@ const ButtonStart = ({ aboutRef }) => {
     <button
       type="button"
       onClick={handleStartButton}
-      className="group relative flex min-h-[2.92rem] min-w-[8.5rem] max-w-full cursor-pointer items-center justify-start overflow-hidden rounded-full bg-white/20 mt-8 backdrop-blur-sm px-4 py-2 shadow-[inset_1px_2px_5px_rgba(0,0,0,0.5)] transition-colors duration-[0.8s] ease-[cubic-bezier(0.51,0.026,0.368,1.016)] hover:bg-white  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
+      className="group relative flex min-h-[2.92rem] min-w-[8.5rem] max-w-full cursor-pointer items-center justify-start overflow-hidden rounded-full bg-white/20 mt-4 backdrop-blur-sm px-4 py-2 shadow-[inset_1px_2px_5px_rgba(0,0,0,0.5)] transition-colors duration-[0.8s] ease-[cubic-bezier(0.51,0.026,0.368,1.016)] hover:bg-white  focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-300"
     >
       <div className="absolute inset-0 flex items-center justify-start px-1 py-0.5">
         <div className="w-0 transition-all duration-[1s] ease-[cubic-bezier(0.51,0.026,0.368,1.016)] group-hover:w-full" />

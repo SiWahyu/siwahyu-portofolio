@@ -1,38 +1,35 @@
 export const easeOut = [0.22, 1, 0.36, 1];
 
 export const viewport = {
-  // Re-run the reveal whenever the section enters the viewport again.
-  once: false,
+  // Run the reveal once; do not re-trigger when scrolling back up.
+  once: true,
   amount: 0.18,
   margin: "0px 0px -8% 0px",
 };
 
 export const fadeUp = {
-  hidden: { opacity: 0, y: 28, filter: "blur(8px)" },
+  hidden: { opacity: 0, y: 28 },
   visible: {
     opacity: 1,
     y: 0,
-    filter: "blur(0px)",
     transition: { duration: 0.7, ease: easeOut },
   },
 };
 
 export const fadeLeft = {
-  hidden: { opacity: 0, x: -36, filter: "blur(8px)" },
+  hidden: { opacity: 0, x: -36 },
   visible: {
     opacity: 1,
     x: 0,
-    filter: "blur(0px)",
     transition: { duration: 0.7, ease: easeOut },
   },
 };
 
 export const fadeRight = {
-  hidden: { opacity: 0, x: 36, filter: "blur(8px)" },
+  hidden: { opacity: 0, x: 36 },
   visible: {
     opacity: 1,
     x: 0,
-    filter: "blur(0px)",
     transition: { duration: 0.7, ease: easeOut },
   },
 };
@@ -45,12 +42,11 @@ export const staggerContainer = (staggerChildren = 0.12, delayChildren = 0) => (
 });
 
 export const cardReveal = {
-  hidden: { opacity: 0, y: 48, scale: 0.94, filter: "blur(6px)" },
+  hidden: { opacity: 0, y: 48, scale: 0.94 },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
-    filter: "blur(0px)",
-    transition: { type: "spring", stiffness: 65, damping: 16, mass: 0.9 },
+    transition: { duration: 0.6, ease: easeOut },
   },
 };

@@ -11,6 +11,7 @@ export const AnimatedBeam = ({
   curvature = 0,
   bendGap, // override manual jarak titik belok dari center (opsional)
   reverse = false, // Include the reverse prop
+  active = false, // pause animasi saat section off-screen
   duration = Math.random() * 3 + 4,
   delay = 0,
   pathColor = "gray",
@@ -148,12 +149,21 @@ export const AnimatedBeam = ({
             y1: "0%",
             y2: "0%",
           }}
-          animate={{
-            x1: gradientCoordinates.x1,
-            x2: gradientCoordinates.x2,
-            y1: gradientCoordinates.y1,
-            y2: gradientCoordinates.y2,
-          }}
+          animate={
+            active
+              ? {
+                  x1: gradientCoordinates.x1,
+                  x2: gradientCoordinates.x2,
+                  y1: gradientCoordinates.y1,
+                  y2: gradientCoordinates.y2,
+                }
+              : {
+                  x1: "0%",
+                  x2: "0%",
+                  y1: "0%",
+                  y2: "0%",
+                }
+          }
           transition={{
             delay,
             duration,

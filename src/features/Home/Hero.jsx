@@ -1,48 +1,37 @@
 import FadeContent from "@/components/FadeContent";
-import AnimatedContent from "@/components/AnimatedContent";
 import HeroTitle from "./components/HeroTitle";
 import ButtonStart from "./components/ButtonStart";
 import HeroImage from "./components/HeroImage";
+import { motion } from "motion/react";
+import { easeOut, viewport } from "@/lib/motion";
 
 export default function Hero({ aboutRef, heroRef }) {
   return (
     <div
-      className="flex flex-col items-center justify-center min-h-screen px-6 mx-auto bg-transparent  md:py-32 lg:mt-10 lg:px-16"
+      className="flex flex-col items-center justify-center min-h-screen px-6 mx-auto md:py-32 lg:mt-10 lg:px-16 "
       ref={heroRef}
     >
-      <div className="flex flex-col-reverse items-center w-full mt-10 lg:flex-row md:mt-0">
-        <div className="w-full mt-10 lg:w-1/2 md:mt-0">
+      <div className="flex flex-col-reverse items-center w-full lg:flex-row md:mt-0">
+        <div className="w-full mt-4 lg:w-1/2 md:mt-0">
           <div className="text-center lg:max-w-lg lg:text-left">
-            <AnimatedContent
-              distance={100}
-              direction="vertical"
-              reverse={true}
-              duration={1}
-              ease="power3.out"
-              initialOpacity={0.2}
-              animateOpacity
-              scale={1}
-              threshold={0.1}
-              delay={0}
+            <motion.div
+              initial={{ y: -100, scale: 1, opacity: 0.2 }}
+              whileInView={{ y: 0, scale: 1, opacity: 1 }}
+              viewport={{ ...viewport, amount: 0.1, once: true }}
+              transition={{ duration: 1, ease: easeOut }}
             >
               <HeroTitle />
-            </AnimatedContent>
-            <AnimatedContent
-              distance={100}
-              direction="vertical"
-              reverse={false}
-              duration={1}
-              ease="power3.out"
-              initialOpacity={0.2}
-              animateOpacity
-              scale={1}
-              threshold={0.1}
-              delay={0}
+            </motion.div>
+            <motion.div
+              initial={{ y: 100, scale: 1, opacity: 0.2 }}
+              whileInView={{ y: 0, scale: 1, opacity: 1 }}
+              viewport={{ ...viewport, amount: 0.1, once: true }}
+              transition={{ duration: 1, ease: easeOut }}
             >
               <div className="flex justify-center lg:justify-start">
                 <ButtonStart aboutRef={aboutRef} />
               </div>
-            </AnimatedContent>
+            </motion.div>
           </div>
         </div>
 
