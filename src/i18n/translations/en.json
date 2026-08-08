@@ -45,33 +45,52 @@
     },
     "items": [
       {
-        "name": "Student Attendance",
+        "name": "Instagram Clone",
         "images": [
-          "presensi/presensi-image-1.jpg",
-          "presensi/presensi-image-2.jpg",
-          "presensi/presensi-image-3.jpg",
-          "presensi/presensi-image-4.jpg",
-          "presensi/presensi-image-5.jpg",
-          "presensi/presensi-image-6.jpg",
-          "presensi/presensi-image-7.jpg",
-          "presensi/presensi-image-8.jpg",
-          "presensi/presensi-image-9.jpg",
-          "presensi/presensi-image-10.jpg",
-          "presensi/presensi-image-11.jpg",
-          "presensi/presensi-image-12.jpg",
-          "presensi/presensi-image-13.jpg",
-          "presensi/presensi-image-14.jpg"
+          "clone-instagram/clone-instagram-image-1.jpg"
         ],
-        "deskrip": "An application to help teachers record and export student attendance in Excel format.",
-        "category": "Web Application",
+        "deskrip": "A mobile version of Instagram clone using React and Tailwind as FE, Laravel as BE, and PostgreSQL as the database with shadcn UI components.",
+        "category": "Fullstack",
+        "tech": [
+          "React",
+          "Tailwind",
+          "shadcn",
+          "Laravel",
+          "PostgreSQL"
+        ],
+        "status": "progress",
+        "link": "https://github.com/SiWahyu"
+      },
+      {
+        "name": "Online Shoe Store",
+        "images": [
+          "toko-sepatu/toko-sepatu-image-1.jpg"
+        ],
+        "deskrip": "An online shoe store application that allows customers to easily search, select, and order their favorite shoes. With a modern and responsive design, it delivers a comfortable and fast shopping experience.",
+        "category": "E-Commerce",
         "tech": [
           "PHP",
           "Laravel",
           "MySQL",
           "Bootstrap",
-          "jQuery"
+          "Midtrans"
         ],
         "status": "completed",
+        "link": "https://github.com/SiWahyu"
+      },
+      {
+        "name": "Tokopedia Clone",
+        "images": [
+          "clone-tokopedia/clone-tokopedia-image-1.jpg"
+        ],
+        "deskrip": "A Tokopedia clone application built with React and Tailwind.",
+        "category": "Frontend",
+        "tech": [
+          "React",
+          "Tailwind",
+          "shadcn"
+        ],
+        "status": "progress",
         "link": "https://github.com/SiWahyu"
       },
       {
@@ -111,52 +130,71 @@
         "link": "https://github.com/SiWahyu"
       },
       {
-        "name": "Online Shoe Store",
+        "name": "Student Attendance",
         "images": [
-          "toko-sepatu/toko-sepatu-image-1.jpg"
+          "presensi/presensi-image-1.jpg",
+          "presensi/presensi-image-2.jpg",
+          "presensi/presensi-image-3.jpg",
+          "presensi/presensi-image-4.jpg",
+          "presensi/presensi-image-5.jpg",
+          "presensi/presensi-image-6.jpg",
+          "presensi/presensi-image-7.jpg",
+          "presensi/presensi-image-8.jpg",
+          "presensi/presensi-image-9.jpg",
+          "presensi/presensi-image-10.jpg",
+          "presensi/presensi-image-11.jpg",
+          "presensi/presensi-image-12.jpg",
+          "presensi/presensi-image-13.jpg",
+          "presensi/presensi-image-14.jpg"
         ],
-        "deskrip": "An online shoe store application that allows customers to easily search, select, and order their favorite shoes. With a modern and responsive design, it delivers a comfortable and fast shopping experience.",
-        "category": "E-Commerce",
+        "deskrip": "An application to help teachers record and export student attendance in Excel format.",
+        "category": "Web Application",
         "tech": [
           "PHP",
           "Laravel",
           "MySQL",
           "Bootstrap",
-          "Midtrans"
+          "jQuery"
         ],
         "status": "completed",
         "link": "https://github.com/SiWahyu"
       },
       {
-        "name": "Tokopedia Clone",
+        "name": "QR Dine",
         "images": [
-          "clone-tokopedia/clone-tokopedia-image-1.jpg"
+          "qr-dine/qr-dine-image-0.jpg",
+          "qr-dine/qr-dine-image-1.jpg",
+          "qr-dine/qr-dine-image-2.jpg",
+          "qr-dine/qr-dine-image-3.jpg",
+          "qr-dine/qr-dine-image-4.jpg",
+          "qr-dine/qr-dine-image-5.jpg",
+          "qr-dine/qr-dine-image-6.jpg",
+          "qr-dine/qr-dine-image-7.jpg",
+          "qr-dine/qr-dine-image-8.jpg",
+          "qr-dine/qr-dine-image-9.jpg",
+          "qr-dine/qr-dine-image-10.jpg",
+          "qr-dine/qr-dine-image-11.jpg",
+          "qr-dine/qr-dine-image-12.jpg",
+          "qr-dine/qr-dine-image-13.jpg",
+          "qr-dine/qr-dine-image-14.jpg",
+          "qr-dine/qr-dine-image-15.jpg",
+          "qr-dine/qr-dine-image-16.jpg",
+          "qr-dine/qr-dine-image-17.jpg",
+          "qr-dine/qr-dine-image-18.jpg"
         ],
-        "deskrip": "A Tokopedia clone application built with React and Tailwind.",
-        "category": "Frontend",
+        "deskrip": "A QR-based food ordering app that lets customers browse the menu and order straight from their table — no login or queuing at the cashier. Pay online or in cash by showing the order QR to the cashier.",
+        "category": "Web Application",
         "tech": [
-          "React",
-          "Tailwind",
-          "shadcn"
-        ],
-        "status": "progress",
-        "link": "https://github.com/SiWahyu"
-      },
-      {
-        "name": "Instagram Clone",
-        "images": [
-          "clone-instagram/clone-instagram-image-1.jpg"
-        ],
-        "deskrip": "A mobile version of Instagram clone using React and Tailwind as FE, Laravel as BE, and PostgreSQL as the database with shadcn UI components.",
-        "category": "Fullstack",
-        "tech": [
-          "React",
-          "Tailwind",
-          "shadcn",
           "Laravel",
-          "PostgreSQL"
+          "React",
+          "MySQL",
+          "Tailwind CSS",
+          "Pusher",
+          "Zustand",
+          "TanStack Query",
+          "Midtrans"
         ],
-        "status": "progress",
+        "status": "completed",
         "link": "https://github.com/SiWahyu"
       }
     ]

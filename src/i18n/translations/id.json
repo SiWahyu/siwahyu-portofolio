@@ -45,33 +45,52 @@
     },
     "items": [
       {
-        "name": "Presensi Siswa",
+        "name": "Clone Instagram",
         "images": [
-          "presensi/presensi-image-1.jpg",
-          "presensi/presensi-image-2.jpg",
-          "presensi/presensi-image-3.jpg",
-          "presensi/presensi-image-4.jpg",
-          "presensi/presensi-image-5.jpg",
-          "presensi/presensi-image-6.jpg",
-          "presensi/presensi-image-7.jpg",
-          "presensi/presensi-image-8.jpg",
-          "presensi/presensi-image-9.jpg",
-          "presensi/presensi-image-10.jpg",
-          "presensi/presensi-image-11.jpg",
-          "presensi/presensi-image-12.jpg",
-          "presensi/presensi-image-13.jpg",
-          "presensi/presensi-image-14.jpg"
+          "clone-instagram/clone-instagram-image-1.jpg"
         ],
-        "deskrip": "Aplikasi untuk mempermudah guru dalam melakukan pencatatan dan perekapan kehadiran siswa dalam bentuk excel.",
-        "category": "Web Application",
+        "deskrip": "Clone Instagram Versi Mobile menggunakan React dan Tailwind Sebagai FE, Laravel Sebagai BE dan PostgreSQL Sebagai Database dengan komponen UI dari shadcn.",
+        "category": "Fullstack",
+        "tech": [
+          "React",
+          "Tailwind",
+          "shadcn",
+          "Laravel",
+          "PostgreSQL"
+        ],
+        "status": "progress",
+        "link": "https://github.com/SiWahyu"
+      },
+      {
+        "name": "Toko Sepatu Online",
+        "images": [
+          "toko-sepatu/toko-sepatu-image-1.jpg"
+        ],
+        "deskrip": "aplikasi toko sepatu online yang memungkinkan pelanggan untuk mencari, memilih, dan memesan sepatu favorit mereka dengan mudah. Dengan tampilan yang modern dan responsif, aplikasi ini memberikan pengalaman berbelanja yang nyaman dan cepat.",
+        "category": "E-Commerce",
         "tech": [
           "PHP",
           "Laravel",
           "MySQL",
           "Bootstrap",
-          "jQuery"
+          "Midtrans"
         ],
         "status": "completed",
+        "link": "https://github.com/SiWahyu"
+      },
+      {
+        "name": "Clone Tokopedia",
+        "images": [
+          "clone-tokopedia/clone-tokopedia-image-1.jpg"
+        ],
+        "deskrip": "Clone Aplikasi Tokopedia yang menggunakan React dan Tailwind.",
+        "category": "Frontend",
+        "tech": [
+          "React",
+          "Tailwind",
+          "shadcn"
+        ],
+        "status": "progress",
         "link": "https://github.com/SiWahyu"
       },
       {
@@ -111,52 +130,71 @@
         "link": "https://github.com/SiWahyu"
       },
       {
-        "name": "Toko Sepatu Online",
+        "name": "Presensi Siswa",
         "images": [
-          "toko-sepatu/toko-sepatu-image-1.jpg"
+          "presensi/presensi-image-1.jpg",
+          "presensi/presensi-image-2.jpg",
+          "presensi/presensi-image-3.jpg",
+          "presensi/presensi-image-4.jpg",
+          "presensi/presensi-image-5.jpg",
+          "presensi/presensi-image-6.jpg",
+          "presensi/presensi-image-7.jpg",
+          "presensi/presensi-image-8.jpg",
+          "presensi/presensi-image-9.jpg",
+          "presensi/presensi-image-10.jpg",
+          "presensi/presensi-image-11.jpg",
+          "presensi/presensi-image-12.jpg",
+          "presensi/presensi-image-13.jpg",
+          "presensi/presensi-image-14.jpg"
         ],
-        "deskrip": "aplikasi toko sepatu online yang memungkinkan pelanggan untuk mencari, memilih, dan memesan sepatu favorit mereka dengan mudah. Dengan tampilan yang modern dan responsif, aplikasi ini memberikan pengalaman berbelanja yang nyaman dan cepat.",
-        "category": "E-Commerce",
+        "deskrip": "Aplikasi untuk mempermudah guru dalam melakukan pencatatan dan perekapan kehadiran siswa dalam bentuk excel.",
+        "category": "Web Application",
         "tech": [
           "PHP",
           "Laravel",
           "MySQL",
           "Bootstrap",
-          "Midtrans"
+          "jQuery"
         ],
         "status": "completed",
         "link": "https://github.com/SiWahyu"
       },
       {
-        "name": "Clone Tokopedia",
+        "name": "QR Dine",
         "images": [
-          "clone-tokopedia/clone-tokopedia-image-1.jpg"
+          "qr-dine/qr-dine-image-0.jpg",
+          "qr-dine/qr-dine-image-1.jpg",
+          "qr-dine/qr-dine-image-2.jpg",
+          "qr-dine/qr-dine-image-3.jpg",
+          "qr-dine/qr-dine-image-4.jpg",
+          "qr-dine/qr-dine-image-5.jpg",
+          "qr-dine/qr-dine-image-6.jpg",
+          "qr-dine/qr-dine-image-7.jpg",
+          "qr-dine/qr-dine-image-8.jpg",
+          "qr-dine/qr-dine-image-9.jpg",
+          "qr-dine/qr-dine-image-10.jpg",
+          "qr-dine/qr-dine-image-11.jpg",
+          "qr-dine/qr-dine-image-12.jpg",
+          "qr-dine/qr-dine-image-13.jpg",
+          "qr-dine/qr-dine-image-14.jpg",
+          "qr-dine/qr-dine-image-15.jpg",
+          "qr-dine/qr-dine-image-16.jpg",
+          "qr-dine/qr-dine-image-17.jpg",
+          "qr-dine/qr-dine-image-18.jpg"
         ],
-        "deskrip": "Clone Aplikasi Tokopedia yang menggunakan React dan Tailwind.",
-        "category": "Frontend",
+        "deskrip": "Aplikasi pesan makanan berbasis QR — pelanggan lihat menu dan pesan langsung dari meja tanpa login atau antre ke kasir. Pembayaran bisa online atau cash, cukup tunjukkan QR pesanan ke kasir.",
+        "category": "Web Application",
         "tech": [
-          "React",
-          "Tailwind",
-          "shadcn"
-        ],
-        "status": "progress",
-        "link": "https://github.com/SiWahyu"
-      },
-      {
-        "name": "Clone Instagram",
-        "images": [
-          "clone-instagram/clone-instagram-image-1.jpg"
-        ],
-        "deskrip": "Clone Instagram Versi Mobile menggunakan React dan Tailwind Sebagai FE, Laravel Sebagai BE dan PostgreSQL Sebagai Database dengan komponen UI dari shadcn.",
-        "category": "Fullstack",
-        "tech": [
-          "React",
-          "Tailwind",
-          "shadcn",
           "Laravel",
-          "PostgreSQL"
+          "React",
+          "MySQL",
+          "Tailwind CSS",
+          "Pusher",
+          "Zustand",
+          "TanStack Query",
+          "Midtrans"
         ],
-        "status": "progress",
+        "status": "completed",
         "link": "https://github.com/SiWahyu"
       }
     ]

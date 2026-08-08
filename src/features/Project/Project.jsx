@@ -15,9 +15,9 @@ const resolveImages = (names = []) =>
 
 export default function Project({ projectRef }) {
   const { t } = useTranslation();
-  const projects = t("project.items", { returnObjects: true }).map(
-    (project) => ({ ...project, images: resolveImages(project.images) }),
-  );
+  const projects = t("project.items", { returnObjects: true })
+    .map((project) => ({ ...project, images: resolveImages(project.images) }))
+    .reverse();
 
   return (
     <div
