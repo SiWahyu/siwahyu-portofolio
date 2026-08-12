@@ -117,7 +117,7 @@ const CardImage = ({ images, name }) => {
                 showImage(activeIndex - 1);
               }}
               aria-label="Gambar sebelumnya"
-              className="absolute left-7 top-1/2 -translate-y-1/2 rounded-full bg-black/55 p-1.5 text-white opacity-0 backdrop-blur-sm transition group-hover:opacity-100 focus-visible:opacity-100 hover:bg-white/70 hover:text-black active:scale-90"
+              className="absolute left-7 top-1/2 -translate-y-1/2 rounded-full border border-white/30 bg-black/55 p-1.5 text-white opacity-0 shadow-lg backdrop-blur-sm transition group-hover:opacity-100 focus-visible:opacity-100 hover:bg-white/70 hover:text-black hover:border-white active:scale-90"
             >
               <ChevronLeft size={18} />
             </button>
@@ -128,7 +128,7 @@ const CardImage = ({ images, name }) => {
                 nextImage();
               }}
               aria-label="Gambar berikutnya"
-              className="absolute right-7 top-1/2 -translate-y-1/2 rounded-full bg-black/55 p-1.5 text-white opacity-0 backdrop-blur-sm transition group-hover:opacity-100 focus-visible:opacity-100 hover:bg-white/70 hover:text-black active:scale-90"
+              className="absolute right-7 top-1/2 -translate-y-1/2 rounded-full border border-white/30 bg-black/55 p-1.5 text-white opacity-0 shadow-lg backdrop-blur-sm transition group-hover:opacity-100 focus-visible:opacity-100 hover:bg-white/70 hover:text-black hover:border-white active:scale-90"
             >
               <ChevronRight size={18} />
             </button>
@@ -178,7 +178,7 @@ const CardImage = ({ images, name }) => {
                       showImage(activeIndex - 1);
                     }}
                     aria-label="Gambar sebelumnya"
-                    className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 grid h-11 w-11 place-items-center rounded-full bg-white/15 text-white backdrop-blur-sm transition hover:bg-white/70 hover:text-black active:scale-90"
+                    className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 grid h-11 w-11 place-items-center rounded-full border border-white/30 bg-black/55 text-white shadow-lg backdrop-blur-sm transition hover:bg-white hover:text-black hover:border-white active:scale-90"
                   >
                     <ChevronLeft size={24} />
                   </button>
@@ -189,7 +189,7 @@ const CardImage = ({ images, name }) => {
                       nextImage();
                     }}
                     aria-label="Gambar berikutnya"
-                    className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 grid h-11 w-11 place-items-center rounded-full bg-white/15 text-white backdrop-blur-sm transition hover:bg-white/70 hover:text-black active:scale-90"
+                    className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 grid h-11 w-11 place-items-center rounded-full border border-white/30 bg-black/55 text-white shadow-lg backdrop-blur-sm transition hover:bg-white hover:text-black hover:border-white active:scale-90"
                   >
                     <ChevronRight size={24} />
                   </button>

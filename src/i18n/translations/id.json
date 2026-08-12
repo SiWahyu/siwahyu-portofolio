@@ -91,7 +91,7 @@
           "shadcn"
         ],
         "status": "progress",
-        "link": "https://github.com/SiWahyu"
+        "link": "https://github.com/SiWahyu/tokopedia-clone"
       },
       {
         "name": "POS System",
@@ -127,7 +127,7 @@
           "Midtrans"
         ],
         "status": "completed",
-        "link": "https://github.com/SiWahyu"
+        "link": "https://github.com/SiWahyu/laravel_pos"
       },
       {
         "name": "Presensi Siswa",
@@ -157,30 +157,29 @@
           "jQuery"
         ],
         "status": "completed",
-        "link": "https://github.com/SiWahyu"
+        "link": "https://github.com/SiWahyu/Presensi-Siswa-Laravel"
       },
       {
         "name": "QR Dine",
         "images": [
-          "qr-dine/qr-dine-image-0.jpg",
-          "qr-dine/qr-dine-image-1.jpg",
-          "qr-dine/qr-dine-image-2.jpg",
-          "qr-dine/qr-dine-image-3.jpg",
-          "qr-dine/qr-dine-image-4.jpg",
-          "qr-dine/qr-dine-image-5.jpg",
-          "qr-dine/qr-dine-image-6.jpg",
-          "qr-dine/qr-dine-image-7.jpg",
-          "qr-dine/qr-dine-image-8.jpg",
-          "qr-dine/qr-dine-image-9.jpg",
-          "qr-dine/qr-dine-image-10.jpg",
-          "qr-dine/qr-dine-image-11.jpg",
-          "qr-dine/qr-dine-image-12.jpg",
-          "qr-dine/qr-dine-image-13.jpg",
-          "qr-dine/qr-dine-image-14.jpg",
-          "qr-dine/qr-dine-image-15.jpg",
-          "qr-dine/qr-dine-image-16.jpg",
-          "qr-dine/qr-dine-image-17.jpg",
-          "qr-dine/qr-dine-image-18.jpg"
+          "qr-dine/qr-dine-image-1.webp",
+          "qr-dine/qr-dine-image-2.webp",
+          "qr-dine/qr-dine-image-3.webp",
+          "qr-dine/qr-dine-image-4.webp",
+          "qr-dine/qr-dine-image-5.webp",
+          "qr-dine/qr-dine-image-6.webp",
+          "qr-dine/qr-dine-image-7.webp",
+          "qr-dine/qr-dine-image-8.webp",
+          "qr-dine/qr-dine-image-9.webp",
+          "qr-dine/qr-dine-image-10.webp",
+          "qr-dine/qr-dine-image-11.webp",
+          "qr-dine/qr-dine-image-12.webp",
+          "qr-dine/qr-dine-image-13.webp",
+          "qr-dine/qr-dine-image-14.webp",
+          "qr-dine/qr-dine-image-15.webp",
+          "qr-dine/qr-dine-image-16.webp",
+          "qr-dine/qr-dine-image-17.webp",
+          "qr-dine/qr-dine-image-18.webp"
         ],
         "deskrip": "Aplikasi pesan makanan berbasis QR — pelanggan lihat menu dan pesan langsung dari meja tanpa login atau antre ke kasir. Pembayaran bisa online atau cash, cukup tunjukkan QR pesanan ke kasir.",
         "category": "Web Application",
@@ -195,7 +194,7 @@
           "Midtrans"
         ],
         "status": "completed",
-        "link": "https://github.com/SiWahyu"
+        "link": "https://github.com/SiWahyu/QRDine"
       }
     ]
   },
